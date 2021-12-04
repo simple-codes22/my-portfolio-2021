@@ -11,7 +11,7 @@ const Projects = () => {
     const useStyle = projectStyle();
 
     return (
-        <Box component='div' className={useStyle.root}>
+        <Box component='div' id='projects' className={useStyle.root}>
             Projects
         </Box>
     )
