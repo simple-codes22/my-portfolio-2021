@@ -17,7 +17,7 @@ const Footer = () => {
 
     return (
         <Box component='div' className={useStyle.root}>
-            Footer
+            
         </Box>
     )
 }
