@@ -4,19 +4,21 @@ import { Box, Typography, Button } from '@mui/material';
 const introStyle = makeStyles(theme => ({
     root: {
         color: '#fff',
-        // display: 'flex',
-        // justifyContent: 'center',
-        // alignItems: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
         flexDirection: 'column',
         position: 'relative',
+        background: '#22242b',
     },
     main: {
-        // position: 'absolute',
         left: '30px',
-        background:'black',
-        alignItems: 'flex-start',
-        // alignItems: 'center',
         flexDirection: 'column',
+        height: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        background: '#22242b'
     },
     greeting: {
         fontSize: '19px',

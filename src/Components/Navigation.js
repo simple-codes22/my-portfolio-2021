@@ -53,8 +53,8 @@ const NavStyle = makeStyles(theme => ({
     mainView: {
         position: "relative",
         // height: '100vh',
-        '& div': {
-            width: '100%',
+        '& > div': {
+            // width: '100%',
             height: '100vh',
             display: 'flex',
             justifyContent: 'center',
