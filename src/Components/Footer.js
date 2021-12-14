@@ -1,30 +1,28 @@
 import { makeStyles } from '@mui/styles';
 import { Box, Button, Typography } from '@mui/material';
-import { GitHub, LinkedIn, Twitter, Facebook } from '@mui/icons-material';
+import { GitHub, LinkedIn, Twitter, Facebook, FileDownloadOutlined } from '@mui/icons-material';
 
 const footerStyle = makeStyles(theme => ({
     root: {
         background: '#22242b',
         color: 'white',
-        height: '300px',
+        height: '60vh',
+        width: '100%',
         display: 'flex',
         justifyContent:"center",
         alignItems: 'center',
         position: 'relative',
     },
-    credits: {
-        
-    },
     socialIcons: {
         position:'absolute',
         right: '100px',
-        bottom: '40px',
+        bottom: '20px',
     },
     tradeMark: {
         fontSize: '13px',
         position:'absolute',
         left: '80px',
-        bottom: '40px',
+        bottom: '20px',
     },
     iconLinks: {
         textDecoration: 'none',
@@ -40,20 +38,40 @@ const footerStyle = makeStyles(theme => ({
     },
     alias: {
         letterSpacing: '1.4px',
+        fontSize: '1.2rem',
     },
     extras: {
         display: 'flex',
         flexDirection: 'row',
+
     },
-    navigation: {
+    nav: {
         display: 'flex',
+        justifyContent: 'flex-start',
+        alignItems: 'flex-start',
         flexDirection: 'column',
-        '&  div': {
-            margin: '5px',
-        }
+        marginLeft: '450px',
+        marginBottom: '10px',
+        // position: 'absolute',
+        // right: '100px',
+    },
+    navCover: {
+        margin: '10px',
     },
     navLinks: {
         color: 'white',
+        fontSize: '15.2px',
+        textDecoration: 'none'
+    },
+    notes: {
+        position: 'absolute',
+        left: '80px',
+    },
+    desc: {
+        marginTop: '30px',
+        width: '400px',
+        fontSize: '13px',
+
     }
 }))
 
@@ -62,22 +80,26 @@ const Footer = () => {
 
     return (
         <Box component='div' className={useStyle.root}>
-            <Box component='div' className={useStyle.bottomNav}>
                 <Box component='section' className={useStyle.extras}>
                     <Box component='div' className={useStyle.notes}>
                         <Typography variant='body1' className={useStyle.alias}>SIMEON AKANBI</Typography>
-                        <Typography></Typography>
+                        <Typography className={useStyle.desc}>I'm a frontend and backend developer and enthusiast passionate about providing solutions to general issues using code.</Typography>
                     </Box>
-                    <Box component='div' classname={useStyle.navigation}>
-                        <Box component='div'><a className={useStyle.navLinks} href='#home'>Home</a></Box>
-                        <Box component='div'><a className={useStyle.navLinks} href='#home'>About</a></Box>
-                        <Box component='div'><a className={useStyle.navLinks} href='#home'>Stacks</a></Box>
-                        <Box component='div'><a className={useStyle.navLinks} href='#home'>Projects</a></Box>
-                        <Box component='div'><a className={useStyle.navLinks} href=''>Contact me</a></Box>
-                        <Button>Resume</Button>
+                    <Box component='div' className={useStyle.nav}>
+                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Home</a></Typography>
+                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>About</a></Typography>
+                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Stacks</a></Typography>
+                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Projects</a></Typography>
+                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#contact'>Contact me</a></Typography>
+                        <Button variant='contained' style={{
+                            height: '32px',
+                            width: '88px',
+                            marginLeft: '9px',
+                            fontSize: '14',
+                            textTransform:'capitalize',
+                        }} endIcon={<FileDownloadOutlined />}>Resume</Button>
                     </Box>
                 </Box>
-            </Box>
             <Box component='div' className={useStyle.credits}>
                 <Box component='div' className={useStyle.tradeMark}>&copy; 2021 Simeon Akanbi. All rights reserved.</Box>
                 <Box component='div' className={useStyle.socialIcons}>
