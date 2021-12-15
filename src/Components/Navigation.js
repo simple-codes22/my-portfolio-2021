@@ -28,7 +28,8 @@ const NavStyle = makeStyles(theme => ({
     main: {
         cursor: 'default',
         letterSpacing: '1.4px',
-        color: '#f5efe7'
+        // color: '#f5efe7'
+        color: '#eedfce'
     },
     avatar: {
         margin: '10px',
