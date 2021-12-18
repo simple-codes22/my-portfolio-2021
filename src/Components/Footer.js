@@ -91,7 +91,7 @@ const Footer = () => {
                         <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Stacks</a></Typography>
                         <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Projects</a></Typography>
                         <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#contact'>Contact me</a></Typography>
-                        <Button variant='contained' style={{
+                        <Button href='' variant='contained' style={{
                             height: '32px',
                             width: '88px',
                             marginLeft: '9px',
