@@ -28,7 +28,7 @@ const aboutStyle = makeStyles(theme => ({
         fontSize: '23px',
         fontWeight: 'bold',
         margin: '10px 0px',
-        textAlign: 'justify',
+        textAlign: 'justify-all',
         letterSpacing: '1px',
     },
     normal: {
@@ -36,9 +36,9 @@ const aboutStyle = makeStyles(theme => ({
         fontSize: '1.11rem',
     },
     mainImage: {
-        width: '400px',
-        height: '500px',
-        borderRadius: '9px',
+        width: '300px',
+        height: '400px',
+        borderRadius: '10px',
     }
 }))
 

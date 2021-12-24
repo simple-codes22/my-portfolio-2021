@@ -1,5 +1,6 @@
 import { makeStyles, } from '@mui/styles';
 import { Box, Typography, Button } from '@mui/material';
+import Social from './misc/Social';
 
 const introStyle = makeStyles(theme => ({
     root: {
@@ -62,6 +63,7 @@ const Intro = () => {
                 </Typography>
                 <Button color="secondary" href='/#projects' className={useStyle.projectBtn}>My Projects</Button>
             </Box>
+            <Social />
         </Box>
     )
 }
