@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material"
 import { makeStyles } from "@mui/styles";
 import { letterSpacing } from "@mui/system";
 import One from '../../Static/Images/One.png';
-import { AOS } from "aos";
 
 
 const aboutStyle = makeStyles(theme => ({
@@ -51,12 +50,32 @@ const About = () => {
     const useStyle = aboutStyle();
     return (
         <Box component='div' className={useStyle.root}>
-            <Box component='div' className={useStyle.aboutImage}>
+            <Box 
+                component='div' 
+                data-aos='fade-right'
+                data-aos-delay='300'
+                data-aos-duration='1300'
+                className={useStyle.aboutImage}
+            >
                 <img src={One} alt="My Image" className={useStyle.mainImage} />
             </Box>
             <Box component='div' className={useStyle.aboutSection}>
-                <Typography variant='h4' className={useStyle.Title}>About me</Typography>
-                <Typography variant='body1' className={useStyle.Content}>
+                <Typography
+                    data-aos='fade-in' 
+                    data-aos-delay='500'
+                    data-aos-duration='1400'
+                    variant='h4' 
+                    className={useStyle.Title}
+                >
+                    About me
+                </Typography>
+                <Typography
+                    data-aos='fade-up'
+                    data-aos-delay='700'
+                    data-aos-duration='1400'
+                    variant='body1' 
+                    className={useStyle.Content}
+                >
                     <Typography variant='body1' className={useStyle.inBold}>
                         Hello I'm Simeon, a passionate developer based in Kaduna, Nigeria. I'm a young student interested in problem solving and communicating ideas through code.
                     </Typography>
