@@ -6,7 +6,7 @@ import One from '../../Static/Images/One.png';
 const aboutStyle = makeStyles(theme => ({
     root: {
         position: 'static !important',
-        background: '#000000e1 !important',
+       // background: '#000000e1 !important',
         color: 'white !important',
         display: 'flex !important',
         justifyContent: 'center !important',
