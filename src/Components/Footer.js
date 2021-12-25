@@ -4,73 +4,73 @@ import { GitHub, LinkedIn, Twitter, Facebook, FileDownloadOutlined } from '@mui/
 
 const footerStyle = makeStyles(theme => ({
     root: {
-        background: '#22242b',
-        color: 'white',
-        height: '60vh',
-        width: '100%',
-        display: 'flex',
-        justifyContent:"center",
-        alignItems: 'center',
-        position: 'relative',
+        background: '#22242b !important',
+        color: 'white !important',
+        height: '60vh !important',
+        width: '100% !important',
+        display: 'flex !important',
+        justifyContent:"center  !important",
+        alignItems: 'center !important',
+        position: 'relative !important',
     },
     socialIcons: {
-        position:'absolute',
-        right: '100px',
-        bottom: '20px',
+        position:'absolute !important',
+        right: '100px !important',
+        bottom: '20px !important',
     },
     tradeMark: {
-        fontSize: '13px',
-        position:'absolute',
-        left: '80px',
-        bottom: '20px',
+        fontSize: '13px !important',
+        position:'absolute !important',
+        left: '80px !important',
+        bottom: '20px !important',
     },
     iconLinks: {
-        textDecoration: 'none',
-        color:'white',
-        margin: '7px',
-        transition: '.3s ease all',
+        textDecoration: 'none !important',
+        color:'white !important',
+        margin: '7px !important',
+        transition: '.3s ease all !important',
         '& > svg': {
-            transition: '.3s ease-in-out all',
+            transition: '.3s ease-in-out all !important',
         },
         '&:hover > svg': {
-            fill: '#9a94ff'
+            fill: '#9a94ff !important'
         }
     },
     alias: {
-        letterSpacing: '1.4px',
-        fontSize: '1.2rem',
+        letterSpacing: '1.4px !important',
+        fontSize: '1.2rem !important',
     },
     extras: {
-        display: 'flex',
-        flexDirection: 'row',
+        display: 'flex !important',
+        flexDirection: 'row !important',
 
     },
     nav: {
-        display: 'flex',
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
-        flexDirection: 'column',
-        marginLeft: '450px',
-        marginBottom: '10px',
-        // position: 'absolute',
-        // right: '100px',
+        display: 'flex !important',
+        justifyContent: 'flex-start !important',
+        alignItems: 'flex-start !important',
+        flexDirection: 'column !important',
+        marginLeft: '450px !important',
+        marginBottom: '10px !important',
+        // position: 'absolute !important',
+        // right: '100px !important',
     },
     navCover: {
-        margin: '10px',
+        margin: '10px !important',
     },
     navLinks: {
-        color: 'white',
-        fontSize: '15.2px',
-        textDecoration: 'none'
+        color: 'white !important',
+        fontSize: '15.2px !important',
+        textDecoration: 'none !important'
     },
     notes: {
-        position: 'absolute',
-        left: '80px',
+        position: 'absolute !important',
+        left: '80px !important',
     },
     desc: {
-        marginTop: '30px',
-        width: '400px',
-        fontSize: '13px',
+        marginTop: '30px !important',
+        width: '400px !important',
+        fontSize: '13px !important',
 
     }
 }))
@@ -92,11 +92,11 @@ const Footer = () => {
                         <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Projects</a></Typography>
                         <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#contact'>Contact me</a></Typography>
                         <Button href='' variant='contained' style={{
-                            height: '32px',
-                            width: '88px',
-                            marginLeft: '9px',
-                            fontSize: '14',
-                            textTransform:'capitalize',
+                            height: '32px !important',
+                            width: '88px !important',
+                            marginLeft: '9px !important',
+                            fontSize: '14 !important',
+                            textTransform:'capitalize !important',
                         }} endIcon={<FileDownloadOutlined />}>Resume</Button>
                     </Box>
                 </Box>
