@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material"
 import { makeStyles } from "@mui/styles"
-import { Avatar } from "@mui/material"
+// import { Avatar } from "@mui/material"
 import CSS from '../../../Static/SVGs/CSS.svg'
 import HTML from '../../../Static/SVGs/HTML.svg'
 import Python from '../../../Static/SVGs/Python.svg'

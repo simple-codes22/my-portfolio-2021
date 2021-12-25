@@ -5,9 +5,9 @@ import { makeStyles } from '@mui/styles';
 // import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import { 
     BrowserRouter as Router,
-    Route,
+    // Route,
     Link,
-    Routes,
+    // Routes,
 } from "react-router-dom";
 import Intro from './Home/Intro';
 import About from './Home/About';

@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material"
 import { makeStyles } from "@mui/styles";
-import { letterSpacing } from "@mui/system";
 import One from '../../Static/Images/One.png';
 
 
@@ -57,7 +56,7 @@ const About = () => {
                 data-aos-duration='1300'
                 className={useStyle.aboutImage}
             >
-                <img src={One} alt="My Image" className={useStyle.mainImage} />
+            <img src={One} alt='Simeon' className={useStyle.mainImage} />
             </Box>
             <Box component='div' className={useStyle.aboutSection}>
                 <Typography
