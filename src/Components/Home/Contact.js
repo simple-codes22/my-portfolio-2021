@@ -45,7 +45,7 @@ const contactStyle = makeStyles(theme => ({
         margin: '14px',
         // borderBottomColor: 'white',
         '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'white',
+            borderColor: '#ffffff60',
             borderRadius: '2px',
             color: 'white',
         },
@@ -54,13 +54,13 @@ const contactStyle = makeStyles(theme => ({
         }
     },
     mainText: {
-        color: 'white',
-        borderColor: 'white !important',
+        color: '#ececec',
+        borderColor: '#ffffff63 !important',
     },
     textarea: {
         width: '635px',
         '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'white',
+            borderColor: '#ffffff63',
             borderRadius: '2px',
             color: 'white',
         },
@@ -87,7 +87,7 @@ const Contact = () => {
                 <Box component='form' className={useStyle.form}>
                     <Box component='div' className={useStyle.textBox}>
                         <TextField className={useStyle.textField}label='Full Name' InputLabelProps={{style: {color: '#fff'}}} inputProps={{className: useStyle.mainText}} required type='text' variant='outlined' />
-                        <TextField className={useStyle.textField} type='email' InputLabelProps={{style: {color: '#ffffffac'}}} inputProps={{className: useStyle.mainText}} label='E-Mail' required variant='outlined' />
+                        <TextField className={useStyle.textField} type='email' InputLabelProps={{style: {color: '#ffffff'}}} inputProps={{className: useStyle.mainText}} label='E-Mail' required variant='outlined' />
                     </Box>
                     {/* <Box component='div' className={useStyle.textBox}>
                     <TextField className={useStyle.emailField} type='email' InputLabelProps={{style: {color: '#ffffff94'}}} inputProps={{className: useStyle.mainText}} variant='outlined'></TextField>

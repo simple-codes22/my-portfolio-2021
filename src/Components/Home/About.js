@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material"
 import { makeStyles } from "@mui/styles";
 import { letterSpacing } from "@mui/system";
 import One from '../../Static/Images/One.png';
+import { AOS } from "aos";
 
 
 const aboutStyle = makeStyles(theme => ({
@@ -23,6 +24,10 @@ const aboutStyle = makeStyles(theme => ({
     aboutSection: {
         width: '700px',
         margin: '10px',
+    },
+    Title: {
+        margin: "30px 0px",
+        fontSize: '3rem',
     },
     inBold: {
         fontSize: '23px',

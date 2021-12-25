@@ -1,6 +1,9 @@
 import { makeStyles, } from '@mui/styles';
 import { Box, Typography, Button } from '@mui/material';
 import Social from './misc/Social';
+import Aos from 'aos';
+
+Aos.init();
 
 const introStyle = makeStyles(theme => ({
     root: {
@@ -54,7 +57,7 @@ const Intro = () => {
     return (
         <Box component='div' className={useStyle.root} id='intro'> {/* Simeon remember the id attr. you put here 👈👈👈 */}
             <Box component='div' className={useStyle.main}>
-                <Typography variant='h3' className={useStyle.Title}>
+                <Typography variant='h3' data-aos='fade-in' className={useStyle.Title}>
                     A Web Developer, Critical Thinker and Passionate Problem Solver
                 </Typography>
                 <Typography variant='body1' className={useStyle.statement}>
