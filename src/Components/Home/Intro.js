@@ -11,7 +11,7 @@ const introStyle = makeStyles(theme => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        position: 'relative',
+        // position: 'relative',
         background: '#22242b',
     },
     main: {
