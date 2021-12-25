@@ -37,24 +37,24 @@ const contactStyle = makeStyles(theme => ({
         margin: '20px',
     },
     textField: {
-        borderRadius: '0',
-        outlineColor: 'white',
+        borderRadius: '0 !important',
+        outlineColor: 'white !important',
         borderColor: 'white !important',
-        width: '300px',
-        outline: 'white',
-        margin: '14px',
+        width: '300px !important',
+        outline: 'white !important',
+        margin: '14px !important',
         // borderBottomColor: 'white',
         '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#ffffff60',
-            borderRadius: '2px',
-            color: 'white',
+            borderColor: '#ffffff60 !important',
+            borderRadius: '2px !important',
+            color: 'white !important',
         },
-        '&:focused .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: 'blue !important'
-        }
+        // '&:focused .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
+        //     borderColor: 'blue !important'
+        // }
     },
     mainText: {
-        color: '#ececec',
+        color: '#ececec !important',
         borderColor: '#ffffff63 !important',
     },
     textarea: {

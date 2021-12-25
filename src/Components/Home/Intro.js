@@ -15,28 +15,28 @@ const introStyle = makeStyles(theme => ({
         background: '#22242b',
     },
     main: {
-        left: '30px',
-        flexDirection: 'column',
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        background: '#22242b'
+        left: '30px !important',
+        flexDirection: 'column !important',
+        height: '100vh !important',
+        display: 'flex !important',
+        justifyContent: 'center !important',
+        alignItems: 'center !important',
+        background: '#22242b !important'
     },
     greeting: {
-        fontSize: '19px',
+        fontSize: '19px !important',
     },
     Title: {
-        fontSize: '47px',
-        textAlign:"center",
-        width: '1050px',
+        fontSize: '47px !important',
+        textAlign:"center !important",
+        width: '1050px !important',
     },
     statement: {
-        margin: '20px',
-        fontSize: '1.14rem',
-        width: '800px',
-        textAlign: 'center',
-        color: '#ffffffa2'
+        margin: '20px !important',
+        fontSize: '1.14rem !important',
+        width: '800px !important',
+        textAlign: 'center !important',
+        color: '#ffffffa2 !important'
     },
     projectBtn: {
         background: '#635bfc !important',
