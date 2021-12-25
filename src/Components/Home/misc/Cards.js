@@ -50,13 +50,13 @@ export const Cards = () => {
     const useStyle = cardStyle()
     return (
         <Box component='div' className={useStyle.cardSection}>
-            <Box component='div'>
+            <Box style={{display: 'flex', flexWrap: 'no-wrap' }} component='div'>
                 <HtmlCard />
                 <CssCard />
                 <JsCard />
                 <PythonCard />
             </Box>
-            <Box component='div'>
+            <Box style={{display: 'flex', flexWrap: 'no-wrap' }} component='div'>
                 <DjangoCard />
                 <ReactCard />
                 <MySQLCard />

@@ -39,14 +39,14 @@ const introStyle = makeStyles(theme => ({
         color: '#ffffffa2'
     },
     projectBtn: {
-        background: '#635bfc',
-        letterSpacing: '1.8px',
-        margin: '40px',
-        width: '160px',
-        height: '55px',
+        background: '#635bfc !important',
+        letterSpacing: '1.8px !important',
+        margin: '40px !important',
+        width: '160px !important',
+        height: '55px !important',
         '&:hover': {
-            background: 'white',
-            color: '#635bfc'
+            background: 'white !important',
+            color: '#635bfc !important'
         }
     }
 }))
@@ -68,7 +68,7 @@ const Intro = () => {
                 <Typography
                     variant='body1' 
                     data-aos='fade-up'
-                    data-aos-duration='1500'
+                    data-aos-duration='1500' 
                     className={useStyle.statement}
                 >
                     I'm a frontend and backend developer and enthusiast passionate about providing solutions to general issues using code.
