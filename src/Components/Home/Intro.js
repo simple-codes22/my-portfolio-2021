@@ -29,7 +29,7 @@ const introStyle = makeStyles(theme => ({
     Title: {
         fontSize: '47px !important',
         textAlign:"center !important",
-        width: '1000px !important',
+        width: '950px !important',
     },
     statement: {
         margin: '20px !important',
