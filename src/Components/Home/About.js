@@ -5,12 +5,12 @@ import One from '../../Static/Images/One.png';
 
 const aboutStyle = makeStyles(theme => ({
     root: {
-        position: 'static',
-        background: '#000000e1',
-        color: 'white',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        position: 'static !important',
+        background: '#000000e1 !important',
+        color: 'white !important',
+        display: 'flex !important',
+        justifyContent: 'center !important',
+        alignItems: 'center !important',
         flex: '1',
     },
     aboutImage: {
@@ -20,23 +20,23 @@ const aboutStyle = makeStyles(theme => ({
         alignItems: 'center',
     },
     aboutSection: {
-        width: '700px',
-        margin: '10px',
+        width: '700px !important',
+        margin: '10px !important',
     },
     Title: {
-        margin: "30px 0px",
-        fontSize: '3rem',
+        margin: "30px 0px !important",
+        fontSize: '3rem !important',
     },
     inBold: {
-        fontSize: '23px',
-        fontWeight: 'bold',
-        margin: '10px 0px',
-        textAlign: 'justify-all',
-        letterSpacing: '1px',
+        fontSize: '23px !important',
+        fontWeight: 'bold !important',
+        margin: '10px 0px !important',
+        textAlign: 'justify-all !important',
+        letterSpacing: '1px !important',
     },
     normal: {
-        textAlign: 'justify',
-        fontSize: '1.11rem',
+        textAlign: 'justify !important',
+        fontSize: '1.11rem !important',
     },
     mainImage: {
         width: '300px',
