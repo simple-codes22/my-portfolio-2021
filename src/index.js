@@ -16,6 +16,14 @@ const mainTheme = createTheme({
   },
   typography: {
     fontFamily: 'Noto Sans, sans-serif',
+  },
+  breakpoints: {
+    values: {
+      mobile: 0,
+      tablet: 640,
+      laptop: 1024,
+      desktop: 1200,
+    },
   }
 })
 
