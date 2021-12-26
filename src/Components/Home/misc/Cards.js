@@ -26,7 +26,7 @@ const cardStyle = makeStyles(theme => ({
         // justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden',
-        backdropFilter: 'blur(20px)',
+        // backdropFilter: 'blur(20px)',
         background: '#080f3636',
         boxShadow: '0px 0px 10px #0a0b207b',
     },
