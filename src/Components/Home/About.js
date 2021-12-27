@@ -39,8 +39,8 @@ const aboutStyle = makeStyles(theme => ({
         fontSize: '1.11rem !important',
     },
     mainImage: {
-        width: '300px',
-        height: '400px',
+        width: '350px',
+        height: '450px',
         borderRadius: '10px',
     }
 }))
