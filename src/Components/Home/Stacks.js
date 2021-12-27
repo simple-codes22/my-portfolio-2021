@@ -11,15 +11,15 @@ const stackStyle = makeStyles(theme => ({
         alignItems: 'center',
     },
     Title: {
-        textAlign: 'center',
-        margin: "30px",
-        fontSize: '3rem',
+        textAlign: 'center !important',
+        margin: "30px !important",
+        fontSize: '3rem !important',
     },
     Info: {
         // margin: '20px',
-        fontSize: "1.37rem",
-        width: '800px',
-        textAlign: 'center',
+        fontSize: "1.37rem !important",
+        width: '800px !important',
+        textAlign: 'center !important',
     }
 }))
 
