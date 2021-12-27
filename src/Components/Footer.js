@@ -87,9 +87,9 @@ const Footer = () => {
                     </Box>
                     <Box component='div' className={useStyle.nav}>
                         <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Home</a></Typography>
-                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>About</a></Typography>
-                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Stacks</a></Typography>
-                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#home'>Projects</a></Typography>
+                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#about'>About</a></Typography>
+                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#stacks'>Stacks</a></Typography>
+                        <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#projects'>Projects</a></Typography>
                         <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#contact'>Contact me</a></Typography>
                         <Button href='' variant='contained' style={{
                             height: '32px !important',

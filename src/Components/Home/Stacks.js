@@ -28,8 +28,24 @@ const Stacks = () => {
     return (
         <Box component='div' className={useStyle.root}>
             <Box component='div'>
-                <Typography variant='h4' className={useStyle.Title}>Tech Stacks</Typography>
-                <Typography variant='body1' className={useStyle.Info}>In my journey as a web developer, I've developed creative and responsive websites various web technologies for both frontend and backend.</Typography>
+                <Typography
+                    variant='h4'
+                    data-aos='fade-in'
+                    data-aos-delay='500'
+                    data-aos-duration='1400'
+                    className={useStyle.Title}
+                >
+                    Tech Stacks
+                </Typography>
+                <Typography 
+                    variant='body1' 
+                    data-aos='fade-up'
+                    data-aos-delay='700'
+                    data-aos-duration='1400'
+                    className={useStyle.Info}
+                >
+                    In my journey as a web developer, I've developed creative and responsive websites various web technologies for both frontend and backend.
+                </Typography>
 
             </Box>
             <Cards />

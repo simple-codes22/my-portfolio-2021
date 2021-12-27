@@ -77,27 +77,63 @@ const Contact = () => {
     return (
         <Box component='div' className={useStyle.root}>
             <Box component='section' className={useStyle.main}>
-                <Typography variant='h4' className={useStyle.Title}>
+                <Typography
+                    variant='h4' 
+                    data-aos='fade-in'
+                    data-aos-delay='500'
+                    data-aos-duration='1400'
+                    data-aos-once='true'
+                    className={useStyle.Title}
+                >
                     Get In Touch
                 </Typography>
-                <Typography variant='body1' className={useStyle.Info}>
+                <Typography
+                    variant='body1' 
+                    data-aos='fade-up'
+                    data-aos-delay='700'
+                    data-aos-duration='1400'
+                    data-aos-once='true'
+                    className={useStyle.Info}
+                >
                     If you want to get in touch with me about a project collaboration or you just want to say hi, 
                     kindly fill the form below and I'll get back to you as soon as possible.
                 </Typography>
                 <Box component='form' className={useStyle.form}>
-                    <Box component='div' className={useStyle.textBox}>
+                    <Box 
+                        component='div' 
+                        data-aos='fade-in'
+                        data-aos-delay='750'
+                        data-aos-duration='1400'
+                        data-aos-once='true'
+                        className={useStyle.textBox}
+                    >
                         <TextField className={useStyle.textField}label='Full Name' InputLabelProps={{style: {color: '#fff'}}} inputProps={{className: useStyle.mainText}} required type='text' variant='outlined' />
                         <TextField className={useStyle.textField} type='email' InputLabelProps={{style: {color: '#ffffff'}}} inputProps={{className: useStyle.mainText}} label='E-Mail' required variant='outlined' />
                     </Box>
                     {/* <Box component='div' className={useStyle.textBox}>
                     <TextField className={useStyle.emailField} type='email' InputLabelProps={{style: {color: '#ffffff94'}}} inputProps={{className: useStyle.mainText}} variant='outlined'></TextField>
                     </Box> */}
-                    <Box component='div' className={useStyle.textBox}>
+                    <Box 
+                        component='div' 
+                        data-aos='fade-in'
+                        data-aos-delay='750'
+                        data-aos-duration='1400'
+                        data-aos-once='true'
+                        className={useStyle.textBox}
+                    >
                         <TextField label='Your Message' required className={useStyle.textarea} rows="10" InputLabelProps={{style: {color: '#fff'}}} multiline inputProps={{className: useStyle.mainText}} variant='outlined'></TextField>
                     </Box>
-                    <Button variant='contained'  endIcon={<SendIcon />} onClick={(elem) => {
-                        elem.preventDefault();
-                    }}>Submit</Button>
+                    <Button 
+                        variant='contained' 
+                        data-aos='fade-in'
+                        data-aos-delay='750'
+                        data-aos-duration='1400'
+                        data-aos-once='true'
+                        endIcon={<SendIcon />} 
+                        onClick={(elem) => {elem.preventDefault();}}
+                    >
+                        Submit
+                    </Button>
                 </Box>
             </Box>
         </Box>

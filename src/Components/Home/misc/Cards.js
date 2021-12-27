@@ -55,13 +55,25 @@ export const Cards = () => {
     const useStyle = cardStyle()
     return (
         <Box component='div' className={useStyle.cardSection}>
-            <Box style={{display: 'flex', }} component='div'>
+            <Box 
+                style={{display: 'flex', }}
+                data-aos='fade-in'
+                data-aos-delay='700'
+                data-aos-duration='1400'
+                component='div'
+            >
                 <HtmlCard />
                 <CssCard />
                 <JsCard />
                 <PythonCard />
             </Box>
-            <Box style={{display: 'flex', }} component='div'>
+            <Box 
+                style={{display: 'flex', }} 
+                data-aos='fade-in'
+                data-aos-delay='700'
+                data-aos-duration='1400'
+                component='div'
+            >
                 <DjangoCard />
                 <ReactCard />
                 <MySQLCard />
@@ -75,7 +87,10 @@ const HtmlCard = () => {
     const useStyle = cardStyle();
 
     return (
-        <Box component='div' className={useStyle.root}>
+        <Box
+            component='div' 
+            className={useStyle.root}
+        >
             <img src={HTML} alt='HTML' className={useStyle.image} />
             <Typography component='p' className={useStyle.langName}>HTML</Typography>
         </Box>
@@ -86,7 +101,10 @@ const CssCard = () => {
     const useStyle = cardStyle();
 
     return (
-        <Box component='div' className={useStyle.root}>
+        <Box 
+            component='div' 
+            className={useStyle.root}
+        >
             <img src={CSS} alt='Css' className={useStyle.image} />
             <Typography component='p' className={useStyle.langName}>CSS</Typography>
         </Box>
@@ -97,7 +115,10 @@ export const JsCard = () => {
     const useStyle = cardStyle();
 
     return (
-        <Box component='div' className={useStyle.root}>
+        <Box 
+            component='div' 
+            className={useStyle.root}
+        >
             <img src={JavaScript} alt='JavaScript' className={useStyle.image} />
             <Typography component='p' className={useStyle.langName}>JavaScript</Typography>
         </Box>

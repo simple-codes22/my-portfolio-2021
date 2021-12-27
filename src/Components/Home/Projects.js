@@ -20,8 +20,13 @@ const Projects = () => {
                 </Typography>
                 <Box component='section' className={useStyle.normalProjects}>
                     <Box component='div' className={useStyle.smallCard}>
-                        
-                    </Box>
+                        <img src="/" alt="iBlog" />
+                        <Typography>iBlog</Typography>
+                        <Box component='div' className={useStyle.desc}>
+                            A generic blogging app capable of basic CRUD operations. 
+                            Built with: Supabase, HTML, CSS, React
+                        </Box>
+                </Box>
                 </Box>
             </Box>
             <Box component='div' className={useStyle.normalProjects}>
