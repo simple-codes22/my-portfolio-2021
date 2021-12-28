@@ -12,7 +12,8 @@ const projectStyle = makeStyles(theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        position: 'static',
+        position: 'relative',
+        overflow: 'hidden'
     },
     first: {
         display: 'flex',
@@ -29,6 +30,8 @@ const projectStyle = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        flexDirection: 'column'
+
     },
     smallCard: {
         display: 'flex',
@@ -38,6 +41,7 @@ const projectStyle = makeStyles(theme => ({
         width: '285px',
         height: '310px',
         border: '1px solid white',
+        margin: '5px',
         // overflow: 'hidden',
         '& img': {
             width: '100%',
@@ -76,44 +80,63 @@ const projectStyle = makeStyles(theme => ({
         fontFamily: 'Source Code Pro, monospace !important',
         fontSize: '.8rem',
         textAlign: 'center',
+    },
+    ProjectSection: {
+        display: 'flex',
     }
 }))
 
 const Projects = () => {
-    const [projects] = useState([
-        {
-            title_: "iBlog",
-            imageSrc: myScreenshot,
-            desc_: 'A generic blogging app capable of basic CRUD operations.',
-            frontend: 'ReactJS',
-            backend: 'Supabase',
-            code: 'https://www.github..com/',
-        },
-        {
-            title_: 'Netflix Clone',
-            imageSrc: myScreenshot,
-            desc_: 'A streaming website inspired by the well-known Netflix website',
-            frontend: 'ReactJS',
-            backend: 'Django',
-            code: '',
-        },
-        {
-            title_: 'Music player',
-            imageSrc: myScreenshot,
-            desc_: '',
-            frontend: '',
-            backend: '',
-            code: '',
-        },
-        {
-            title_: '',
-            imageSrc: myScreenshot,
-            desc_: '',
-            frontend: '',
-            backend: '',
-            code: '',
-        },
-    ])
+    const [projects] = useState({
+        top: [{
+                    title_: "iBlog",
+                    imageSrc: myScreenshot,
+                    desc_: 'A generic blogging app capable of basic CRUD operations.',
+                    frontend: 'ReactJS',
+                    backend: 'Supabase',
+                    code: 'https://www.github..com/',
+                },
+                {
+                    title_: 'Netflix Clone',
+                    imageSrc: myScreenshot,
+                    desc_: "A project inspired by the world's largest movie streaming site.",
+                    frontend: 'ReactJS',
+                    backend: 'Django',
+                    code: 'https://www.github.com/',
+                },
+                {
+                    title_: 'Music player',
+                    imageSrc: myScreenshot,
+                    desc_: 'A music player made in the early days of my journey',
+                    frontend: 'Pure JavaScript',
+                    backend: 'None',
+                    code: 'https://www.github.com/',
+                }],
+        bottom: [{
+                    title_: 'E-Commerce Site',
+                    imageSrc: myScreenshot,
+                    desc_: '',
+                    frontend: 'ReactJS',
+                    backend: 'Django/Flask',
+                    code: 'https://www.github.com/',
+                },
+                {
+                    title_: 'Groove (landing Page)',
+                    imageSrc: myScreenshot,
+                    desc_: 'My first ever landing page',
+                    frontend: 'HTML, CSS and JavaScript',
+                    backend: 'None',
+                    code: 'https://www.github.com/',
+                },
+                {
+                    title_: 'FutureView (Landing page)',
+                    imageSrc: myScreenshot,
+                    desc_: '',
+                    frontend: 'HTML, CSS and JavaScript',
+                    backend: 'None',
+                    code: 'https://www.github.com/',
+                }],
+    })
     const useStyle = projectStyle();
 
     return (
@@ -123,9 +146,10 @@ const Projects = () => {
                     Web Projects
                 </Typography>
                 <Box component='section' className={useStyle.normalProjects}>
-                    {projects.map(elem => {
+                    <Box component='div'className={useStyle.ProjectSection}>
+                    {projects.top.map(elem => { // An iteration of all the projects 
                         return (
-                            <Box component='div' className={useStyle.smallCard}>
+                            <Box key={elem.title} component='div' className={useStyle.smallCard}>
                                 <img src={elem.imageSrc} alt={elem.title_} />
                                 <Typography className={useStyle.PName}>{elem.title_}</Typography> {/* Projects's Name */}
                                 <Box component='div' className={useStyle.desc}>
@@ -138,12 +162,36 @@ const Projects = () => {
                                     </Box>
                                 <Box component='div' className={useStyle.anchors}>
                                     <Button className={useStyle.anchorBtns} variant='contained' color='primary' endIcon={<PreviewIcon />}>Preview</Button>
-                                    <Button className={useStyle.anchorBtns} href={elem.code} variant='contained' color='secondary' endIcon={<GitHub />}>code</Button>
+                                    <Button className={useStyle.anchorBtns} href={elem.code} target='_blank' variant='contained' color='secondary' endIcon={<GitHub />}>code</Button>
                                 </Box>
                             </Box>
-                            )
-                        } )
+                        )
+                    })
                     }
+                    </Box>
+                    <Box component='div' className={useStyle.ProjectSection}>
+                    {projects.bottom.map(elem => { // An iteration of all the projects 
+                        return (
+                            <Box key={elem.title} component='div' className={useStyle.smallCard}>
+                                <img src={elem.imageSrc} alt={elem.title_} />
+                                <Typography className={useStyle.PName}>{elem.title_}</Typography> {/* Projects's Name */}
+                                <Box component='div' className={useStyle.desc}>
+                                    {elem.desc_}
+                                </Box>
+                                    <Box className={useStyle.langUsed}>
+                                        Frontend: {elem.frontend}
+                                        <br></br>
+                                        Backend: {elem.backend}
+                                    </Box>
+                                <Box component='div' className={useStyle.anchors}>
+                                    <Button className={useStyle.anchorBtns} variant='contained' color='primary' endIcon={<PreviewIcon />}>Preview</Button>
+                                    <Button className={useStyle.anchorBtns} href={elem.code} target='_blank' variant='contained' color='secondary' endIcon={<GitHub />}>code</Button>
+                                </Box>
+                            </Box>
+                        )
+                    })
+                    }
+                    </Box>
                 </Box>
             </Box>
             <Box component='div' className={useStyle.second}>
