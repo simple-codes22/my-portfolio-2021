@@ -119,7 +119,7 @@ const Projects = () => {
         bottom: [{
                     title_: 'E-Commerce Site',
                     imageSrc: myScreenshot,
-                    desc_: 'A simple E-Commerce site built utilizing ReactJS and Django frameworks.',
+                    desc_: 'A simple E-Commerce site built with ReactJS and Django.',
                     frontend: 'ReactJS',
                     backend: 'Django/Flask',
                     code: 'https://www.github.com/',
@@ -135,7 +135,7 @@ const Projects = () => {
                 {
                     title_: 'FutureView (Landing page)',
                     imageSrc: myScreenshot,
-                    desc_: 'A generic landing page making use of simple and pure JavaScript.',
+                    desc_: 'A generic landing page making use of pure JavaScript.',
                     frontend: 'HTML, CSS and JavaScript',
                     backend: 'None',
                     code: 'https://www.github.com/',
