@@ -153,7 +153,7 @@ const Projects = () => {
                     code: 'https://www.github.com/',
                 }],
     })
-    const [startups] = useSate({
+    const [startups] = useState({
         topSection: [
             {
                 title_: 'Project Verdure',
