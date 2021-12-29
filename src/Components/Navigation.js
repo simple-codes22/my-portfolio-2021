@@ -57,6 +57,7 @@ const NavStyle = makeStyles(theme => ({
         '& > div': {
             // width: '100%',
             // height: '100vh',
+            padding: '40px',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',

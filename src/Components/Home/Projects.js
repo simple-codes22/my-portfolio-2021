@@ -38,16 +38,19 @@ const projectStyle = makeStyles(theme => ({
         justifyContent: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        width: '285px',
-        height: '310px',
-        border: '1px solid white',
-        margin: '5px',
+        width: '295px',
+        height: '330px',
+        // border: '1px solid white',
+        background: '#080f368e',
+        margin: '15px',
+        borderRadius: '3px',
+        boxShadow: '0px 0px 10px #0a0b207b',
         // overflow: 'hidden',
         '& img': {
-            width: '100%',
+            width: '285px',
             height: '150px',
-            border: '1px solid green',
-            // margin: '4px',
+            // border: '1px solid green',
+            // margin: '2px',
         }
     },
     anchors: {
@@ -62,7 +65,6 @@ const projectStyle = makeStyles(theme => ({
         fontSize: '13px',
         fontFamily: 'Noto Sans, sans-serif !important'
     },
-    startUp: {},
     desc: {
         display: 'flex',
         alignItems: 'center',
@@ -71,9 +73,10 @@ const projectStyle = makeStyles(theme => ({
         margin: '3px',
     },
     PName: { // Project's Name
-        fontSize: '18px',
+        fontSize: '20px',
         fontFamily:'Ubuntu Mono, monospace !important',
         margin: '1px',
+        letterSpacing: '1px'
     },
     langUsed: {
         color: '#dfddddea',
@@ -83,7 +86,8 @@ const projectStyle = makeStyles(theme => ({
     },
     ProjectSection: {
         display: 'flex',
-    }
+    },
+    startUp: {},
 }))
 
 const Projects = () => {
