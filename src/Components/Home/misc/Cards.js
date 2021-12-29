@@ -27,8 +27,8 @@ const cardStyle = makeStyles(theme => ({
         alignItems: 'center',
         overflow: 'hidden',
         // backdropFilter: 'blur(20px)',
-        background: '#080f368e',
-        boxShadow: '0px 0px 10px #0a0b207b',
+        background: '#0601148d !important',
+        boxShadow: '0px 0px 10px #0a0b207b !important',
         [theme.breakpoints.down('laptop')]: {
             width: '180px',
             height: '220px',

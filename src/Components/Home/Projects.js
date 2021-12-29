@@ -43,7 +43,7 @@ const projectStyle = makeStyles(theme => ({
         width: '325px !important',
         height: '350px !important',
         // border: '1px solid white !important',
-        background: '#0601149d !important',
+        background: '#0601148d !important',
         margin: '15px !important',
         borderRadius: '3px !important',
         boxShadow: '0px 0px 10px #0a0b207b !important',
