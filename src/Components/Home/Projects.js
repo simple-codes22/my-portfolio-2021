@@ -71,6 +71,7 @@ const projectStyle = makeStyles(theme => ({
         justifyContent: 'center !important',
         textAlign: 'center !important',
         margin: '3px !important',
+        fontSize: '14px !important',
     },
     PName: { // Project's Name
         fontSize: '20px !important',
