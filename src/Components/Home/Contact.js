@@ -21,10 +21,10 @@ const contactStyle = makeStyles(theme => ({
         fontSize: '3rem'
     },
     Info: {
-        margin: '20px',
-        fontSize: "1.37rem",
-        width: '55%',
-        textAlign: 'center',
+        margin: '20px !important',
+        fontSize: "1.37rem !important",
+        width: '55% !important',
+        textAlign: 'center !important',
     },
     form: {
         display: 'flex',
