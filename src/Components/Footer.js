@@ -86,7 +86,7 @@ const Footer = () => {
                             color="#eedfce" 
                             variant='body1' 
                             data-aos='fade-in' 
-                            data-aos-delay='600' 
+                            data-aos-delay='200' 
                             data-aos-duration='1350' 
                             data-aos-once='true' 
                             className={useStyle.alias}

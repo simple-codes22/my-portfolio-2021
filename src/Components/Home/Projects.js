@@ -174,7 +174,7 @@ const Projects = () => {
                 state: 'development',
             },
             {
-                title_: 'Instrunet&trade;',
+                title_: 'Instrunet',
                 imageSrc: '',
                 src: '',
                 state: 'development',
@@ -194,7 +194,7 @@ const Projects = () => {
         ],
         bottomSection: [
             {
-                title_: 'Cova&trade;',
+                title_: 'Cova',
                 imageSrc: '',
                 src: '',
                 state: 'development',
@@ -212,7 +212,7 @@ const Projects = () => {
                 state: 'development',
             },
             {
-                title_: 'Haggle&trade;',
+                title_: 'Haggle',
                 imageSrc: '',
                 src: '',
                 state: 'development',
