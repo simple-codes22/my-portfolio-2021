@@ -104,7 +104,7 @@ const projectStyle = makeStyles(theme => ({
         flexDirection: 'column',
         border: '1px solid white',
         margin: '10px',
-        width: '320px',
+        width: '325px',
         height: '236px',
         '&img': {
             width: '100%',
