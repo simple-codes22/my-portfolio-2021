@@ -105,6 +105,7 @@ const Footer = () => {
                         <Button 
                             href={resumeUrl}
                             target='_blank'
+                            rel='noreferrer'
                             variant='contained' 
                             style={{
                             height: '32px !important',
