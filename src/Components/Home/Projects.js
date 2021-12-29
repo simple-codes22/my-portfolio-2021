@@ -292,7 +292,7 @@ const Projects = () => {
                             }
                         })}
                     </Box>
-                    <Box component='section' className={useStyle.startUp}>
+                    <Box component='section' className={useStyle.ProjectSection}>
                         {startups.bottomSection.map(elem => {
                             if (elem.state === 'development') {
                                 return (
