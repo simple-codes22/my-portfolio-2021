@@ -98,7 +98,7 @@ const Projects = () => {
                     desc_: 'A generic blogging app capable of basic CRUD operations.',
                     frontend: 'ReactJS',
                     backend: 'Supabase',
-                    code: 'https://www.github..com/',
+                    code: 'https://www.github.com/',
                 },
                 {
                     title_: 'Netflix Clone',
@@ -111,7 +111,7 @@ const Projects = () => {
                 {
                     title_: 'Music player',
                     imageSrc: myScreenshot,
-                    desc_: 'A music player made in the early days of my journey',
+                    desc_: 'A music player made in the early days of my journey.',
                     frontend: 'Pure JavaScript',
                     backend: 'None',
                     code: 'https://www.github.com/',
@@ -119,7 +119,7 @@ const Projects = () => {
         bottom: [{
                     title_: 'E-Commerce Site',
                     imageSrc: myScreenshot,
-                    desc_: '',
+                    desc_: 'A simple E-Commerce site built utilizing the JavaScript and Python frameworks.',
                     frontend: 'ReactJS',
                     backend: 'Django/Flask',
                     code: 'https://www.github.com/',
@@ -127,7 +127,7 @@ const Projects = () => {
                 {
                     title_: 'Groove (landing Page)',
                     imageSrc: myScreenshot,
-                    desc_: 'My first ever landing page',
+                    desc_: 'My first ever landing page completed as a developer',
                     frontend: 'HTML, CSS and JavaScript',
                     backend: 'None',
                     code: 'https://www.github.com/',
@@ -135,7 +135,7 @@ const Projects = () => {
                 {
                     title_: 'FutureView (Landing page)',
                     imageSrc: myScreenshot,
-                    desc_: '',
+                    desc_: 'A generic landing page making use of pure JavaScripting.',
                     frontend: 'HTML, CSS and JavaScript',
                     backend: 'None',
                     code: 'https://www.github.com/',
