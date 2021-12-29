@@ -88,7 +88,12 @@ const projectStyle = makeStyles(theme => ({
     ProjectSection: {
         display: 'flex !important',
     },
-    startUp: {},
+    startUp: {
+        margin: '10px',
+    },
+    Card: {
+
+    }
 }))
 
 const Projects = () => {
@@ -211,6 +216,7 @@ const Projects = () => {
                     <Box component='div' className={useStyle.Card}>Cova&trade;</Box>
                     <Box component='div' className={useStyle.Card}>Top Sales</Box>
                     <Box component='div' className={useStyle.Card}>Democrats</Box>
+                    <Box component='div' className={useStyle.Card}>Haggle&trade;</Box>
                 </Box>
             </Box>
         </Box>
