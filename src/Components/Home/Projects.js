@@ -98,7 +98,16 @@ const projectStyle = makeStyles(theme => ({
 
     },
     Card: {
-
+        display: 'flex',
+        border: '1px solid white',
+        margin: '10px',
+        width: '300px',
+        height: '230px',
+        '&img': {
+            width: '100%',
+            height: '55%',
+            background: 'white',
+        }
     }
 }))
 
