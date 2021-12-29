@@ -2,6 +2,7 @@ import { makeStyles } from "@mui/styles"
 import { Box, Button, Typography } from '@mui/material';
 import { GitHub } from "@mui/icons-material";
 import PreviewIcon from '@mui/icons-material/Preview';
+// import ConstructionIcon from '@mui/icons-material/Construction';
 import { useState } from "react";
 import myScreenshot from "../../Static/Images/projects/Screenshot (77).png";
 
@@ -90,6 +91,11 @@ const projectStyle = makeStyles(theme => ({
     },
     startUp: {
         margin: '10px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
+
     },
     Card: {
 
@@ -147,6 +153,60 @@ const Projects = () => {
                     code: 'https://www.github.com/',
                 }],
     })
+    const [startups] = useSate({
+        topSection: [
+            {
+                title_: 'Project Verdure',
+                imageSrc: '',
+                src: '',
+                state: 'development',
+            },
+            {
+                title_: 'Instrunet&trade;',
+                imageSrc: '',
+                src: '',
+                state: 'development',
+            },
+            {
+                title_: 'IdeaHub',
+                imageSrc: '',
+                src: '',
+                state: 'development',
+            },
+            {
+                title_: 'Lone Pair',
+                imageSrc: '',
+                src: '',
+                state: 'development',
+            },
+        ],
+        bottomSection: [
+            {
+                title_: 'Cova&trade;',
+                imageSrc: '',
+                src: '',
+                state: 'development',
+            },
+            {
+                title_: 'Top Sales',
+                imageSrc: '',
+                src: '',
+                state: 'development',
+            },
+            {
+                title_: 'Democrats',
+                imageSrc: '',
+                src: '',
+                state: 'development',
+            },
+            {
+                title_: 'Haggle&trade;',
+                imageSrc: '',
+                src: '',
+                state: 'development',
+            },
+        ]
+    }) 
     const useStyle = projectStyle();
 
     return (
@@ -209,14 +269,52 @@ const Projects = () => {
                     Start-Up projects
                 </Typography>
                 <Box component='section' className={useStyle.startUp}>
-                    <Box component='div' className={useStyle.Card}>Project Verdure</Box>
-                    <Box component='div' className={useStyle.Card}>Instrunet&trade;</Box>
-                    <Box component='div' className={useStyle.Card}>IdeaHub</Box>
-                    <Box component='div' className={useStyle.Card}>Lone Pair</Box>
-                    <Box component='div' className={useStyle.Card}>Cova&trade;</Box>
-                    <Box component='div' className={useStyle.Card}>Top Sales</Box>
-                    <Box component='div' className={useStyle.Card}>Democrats</Box>
-                    <Box component='div' className={useStyle.Card}>Haggle&trade;</Box>
+                    <Box component='div' className={useStyle.ProjectSection}>
+                        {startups.topSection.map(elem => {
+                            if (elem.state === 'development') {
+                                return (
+                                    <Box component='div' className={useStyle.Card}>
+                                        <Box component='div' className={`${useStyle.image} ${useStyle.Development}`}>
+                                            <img src={elem.imageSrc} alt={elem.title_} />
+                                        </Box>
+                                        <Box component='div' className={useStyle.startupTitle}>{elem.title_}</Box>
+                                    </Box>
+                                )
+                            } else {
+                                return (
+                                    <Box component='div' className={useStyle.Card}>
+                                        <Box component='div' className={useStyle.image}>
+                                            <img src={elem.imageSrc} alt={elem.title_} />
+                                        </Box>
+                                        <Box component='div' className={useStyle.startupTitle}>{elem.title_}</Box>
+                                    </Box>
+                                )
+                            }
+                        })}
+                    </Box>
+                    <Box component='section' className={useStyle.startUp}>
+                        {startups.bottomSection.map(elem => {
+                            if (elem.state === 'development') {
+                                return (
+                                    <Box component='div' className={useStyle.Card}>
+                                        <Box component='div' className={`${useStyle.image} ${useStyle.Development}`}>
+                                            <img src={elem.imageSrc} alt={elem.title_} />
+                                        </Box>
+                                        <Box component='div' className={useStyle.startupTitle}>{elem.title_}</Box>
+                                    </Box>
+                                )
+                            } else {
+                                return (
+                                    <Box component='div' className={useStyle.Card}>
+                                        <Box component='div' className={useStyle.image}>
+                                            <img src={elem.imageSrc} alt={elem.title_} />
+                                        </Box>
+                                        <Box component='div' className={useStyle.startupTitle}>{elem.title_}</Box>
+                                    </Box>
+                                )
+                            }
+                        })}
+                    </Box>
                 </Box>
             </Box>
         </Box>
