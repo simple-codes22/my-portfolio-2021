@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles"
 import { Box, Button, Typography } from '@mui/material';
 import { GitHub } from "@mui/icons-material";
 import PreviewIcon from '@mui/icons-material/Preview';
-// import ConstructionIcon from '@mui/icons-material/Construction';
+import ConstructionIcon from '@mui/icons-material/Construction';
 import { useState } from "react";
 import myScreenshot from "../../Static/Images/projects/Screenshot (77).png";
 
@@ -39,8 +39,8 @@ const projectStyle = makeStyles(theme => ({
         justifyContent: 'center !important',
         alignItems: 'center !important',
         flexDirection: 'column !important',
-        width: '295px !important',
-        height: '330px !important',
+        width: '325px !important',
+        height: '350px !important',
         // border: '1px solid white !important',
         background: '#060114 !important',
         margin: '15px !important',
@@ -100,19 +100,44 @@ const projectStyle = makeStyles(theme => ({
     },
     Card: {
         display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         flexDirection: 'column',
-        border: '1px solid white',
+        // border: '1px solid white',
+        borderRadius: '3px',
         margin: '10px',
         width: '325px',
-        height: '236px',
-        '&img': {
-            width: '100%',
-            height: '55%',
+        height: '300px',
+        overflow: 'hidden',
+        background: '#060114 !important',
+        // color: 'black',
+        transition: 'all .3s',
+        boxShadow: '0px 8px 6px -6px rgb(15 0 68 / 58%)',
+        '& img': {
+            justifySelf: 'flex-start !important',
+            width: '325px',
+            height: '210px',
             background: 'white',
-            border: '1px solid white',
+            // border: '1px solid white',
+        },
+        '&:hover': {
+
         }
+    },
+    startupTitle: {
+        textAlign: 'center',
+        margin: '10px',
+        fontSize: '22px !important',
+        fontFamily:'Source Code Pro, monospace !important',
+        letterSpacing: '.2px !important',
+    },
+    devStatement: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        fontSize: '14px',
+        letterSpacing: '.15px',
+        color: '#ffffff6e'
     }
 }))
 
@@ -171,7 +196,7 @@ const Projects = () => {
         topSection: [
             {
                 title_: 'Project Verdure',
-                imageSrc: '',
+                imageSrc: myScreenshot,
                 src: '',
                 state: 'development',
             },
@@ -292,6 +317,7 @@ const Projects = () => {
                                             <img src={elem.imageSrc} alt={elem.title_} />
                                         </Box>
                                         <Box component='div' className={useStyle.startupTitle}>{elem.title_}</Box>
+                                        <Box component='div' className={useStyle.devStatement}><ConstructionIcon /> <span>In Development</span></Box>
                                     </Box>
                                 )
                             } else {
@@ -315,6 +341,7 @@ const Projects = () => {
                                             <img src={elem.imageSrc} alt={elem.title_} />
                                         </Box>
                                         <Box component='div' className={useStyle.startupTitle}>{elem.title_}</Box>
+                                        <Box component='div' className={useStyle.devStatement}><ConstructionIcon /> <span>In Development</span></Box>
                                     </Box>
                                 )
                             } else {
