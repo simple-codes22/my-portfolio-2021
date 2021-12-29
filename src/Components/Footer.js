@@ -82,7 +82,17 @@ const Footer = () => {
         <Box component='div' className={useStyle.root}>
                 <Box component='section' className={useStyle.extras}>
                     <Box component='div' className={useStyle.notes}>
-                        <Typography color="#eedfce" variant='body1' className={useStyle.alias}>SIMEON AKANBI</Typography>
+                        <Typography 
+                            color="#eedfce" 
+                            variant='body1' 
+                            data-aos='fade-in' 
+                            data-aos-delay='600' 
+                            data-aos-duration='1350' 
+                            data-aos-once='true' 
+                            className={useStyle.alias}
+                        >
+                            SIMEON AKANBI
+                        </Typography>
                         <Typography className={useStyle.desc}>I'm a frontend and backend developer and enthusiast passionate about providing solutions to general issues using code.</Typography>
                     </Box>
                     <Box component='div' className={useStyle.nav}>

@@ -99,6 +99,9 @@ const projectStyle = makeStyles(theme => ({
     },
     Card: {
         display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column',
         border: '1px solid white',
         margin: '10px',
         width: '300px',
