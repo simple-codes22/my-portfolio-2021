@@ -85,7 +85,7 @@ const Navigation = () => {
                     <Link to="/" className={useStyle.link}>Home</Link>
                     <Link to="/Projects" className={useStyle.link}>Projects</Link>
                     <Link to="/" className={useStyle.link}>Contact</Link>
-                    <a href={resumeUrl} className={useStyle.link}>Résumé</a> 
+                    <a href={resumeUrl} target='_blank' className={useStyle.link}>Résumé</a> 
                     {/* Note: I initially wanted to put a download icon beside the resume link */}
                 </Box>
             </Toolbar>

@@ -104,6 +104,7 @@ const Footer = () => {
                         <Typography variant='body2' className={useStyle.navCover}><a className={useStyle.navLinks} href='#contact'>Contact me</a></Typography>
                         <Button 
                             href={resumeUrl}
+                            target='_blank'
                             variant='contained' 
                             style={{
                             height: '32px !important',
