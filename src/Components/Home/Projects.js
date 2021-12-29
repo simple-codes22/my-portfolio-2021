@@ -62,7 +62,7 @@ const projectStyle = makeStyles(theme => ({
     anchorBtns: {
         width:'96px !important',
         height: '30px !important',
-        margin: '6px !important',
+        margin: '8px !important',
         fontSize: '13px !important',
         fontFamily: 'Noto Sans, sans-serif !important'
     },
