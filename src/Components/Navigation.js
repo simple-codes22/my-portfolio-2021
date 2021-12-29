@@ -14,6 +14,7 @@ import About from './Home/About';
 import Stacks from './Home/Stacks';
 import Projects from './Home/Projects';
 import Contact from './Home/Contact'
+import resumeUrl from "../Backend/supabaseClient";
 
 
 const NavStyle = makeStyles(theme => ({
@@ -84,7 +85,7 @@ const Navigation = () => {
                     <Link to="/" className={useStyle.link}>Home</Link>
                     <Link to="/Projects" className={useStyle.link}>Projects</Link>
                     <Link to="/" className={useStyle.link}>Contact</Link>
-                    <a href="../Static/Docs/Resume.pdf" className={useStyle.link}>Résumé</a> 
+                    <a href={resumeUrl} className={useStyle.link}>Résumé</a> 
                     {/* Note: I initially wanted to put a download icon beside the resume link */}
                 </Box>
             </Toolbar>
