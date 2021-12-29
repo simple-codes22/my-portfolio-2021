@@ -111,6 +111,7 @@ const projectStyle = makeStyles(theme => ({
             width: '100%',
             height: '55%',
             background: 'white',
+            border: '1px solid white',
         }
     }
 }))
