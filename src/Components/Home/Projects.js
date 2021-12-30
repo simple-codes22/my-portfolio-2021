@@ -4,7 +4,11 @@ import { GitHub } from "@mui/icons-material";
 import PreviewIcon from '@mui/icons-material/Preview';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import { useState } from "react";
-import myScreenshot from "../../Static/Images/projects/Screenshot (77).png";
+import myScreenshot from "../../Static/Images/projects/Netflix.png";
+import Netflix from "../../Static/Images/projects/Netflix.png";
+import iBlog from "../../Static/Images/projects/iBlog.png";
+import ECommerce from "../../Static/Images/projects/E-Commerce.png";
+// import myScreenshot from "../../Static/Images/projects/Netflix.png"
 
 const projectStyle = makeStyles(theme => ({
     root: {
@@ -49,8 +53,8 @@ const projectStyle = makeStyles(theme => ({
         boxShadow: '0px 0px 10px #0a0b207b !important',
         // overflow: 'hidden !important',
         '& img': {
-            width: '285px !important',
-            height: '150px !important',
+            width: '100% !important',
+            height: '202px !important',
             // border: '1px solid green !important',
             // margin: '2px !important',
         }
@@ -149,7 +153,7 @@ const Projects = () => {
     const [projects] = useState({
         top: [{
                     title_: "iBlog",
-                    imageSrc: myScreenshot,
+                    imageSrc: iBlog,
                     desc_: 'A generic blogging app capable of basic CRUD operations.',
                     frontend: 'ReactJS',
                     backend: 'Supabase',
@@ -157,7 +161,7 @@ const Projects = () => {
                 },
                 {
                     title_: 'Netflix Clone',
-                    imageSrc: myScreenshot,
+                    imageSrc: Netflix,
                     desc_: "A project inspired by the world's largest movie streaming site.",
                     frontend: 'ReactJS',
                     backend: 'Django',
@@ -173,7 +177,7 @@ const Projects = () => {
                 }],
         bottom: [{
                     title_: 'E-Commerce Site',
-                    imageSrc: myScreenshot,
+                    imageSrc: ECommerce,
                     desc_: 'A simple E-Commerce site built with ReactJS and Django.',
                     frontend: 'ReactJS',
                     backend: 'Django/Flask',
