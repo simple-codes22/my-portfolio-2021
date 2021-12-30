@@ -4,12 +4,13 @@ import { GitHub } from "@mui/icons-material";
 import PreviewIcon from '@mui/icons-material/Preview';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import { useState } from "react";
-import myScreenshot from "../../Static/Images/projects/Netflix.png";
+import ComingSoon from "../../Static/Images/projects/ComingSoon.jpg";
 import Netflix from "../../Static/Images/projects/Netflix.png";
 import iBlog from "../../Static/Images/projects/iBlog.png";
 import ECommerce from "../../Static/Images/projects/E-Commerce.png";
 import FutureView from "../../Static/Images/projects/FutureView.png"
 import Groove from "../../Static/Images/projects/Groove.png"
+import MusicPlayer from "../../Static/Images/projects/MPlayer.png";
 
 const projectStyle = makeStyles(theme => ({
     root: {
@@ -47,13 +48,12 @@ const projectStyle = makeStyles(theme => ({
         flexDirection: 'column !important',
         width: '335px !important',
         height: '360px !important',
-        // border: '1px solid white !important',
         background: '#0601148d !important',
         margin: '15px !important',
         borderRadius: '3px !important',
         boxShadow: '0px 8px 6px -6px rgb(15 0 68 / 58%) !important',
-        transition: 'all .3s',
-        // overflow: 'hidden !important',
+        transition: 'all .3s !important',
+        overflow: 'hidden !important',
         '& img': {
             width: '100% !important',
             height: '202px !important',
@@ -131,6 +131,7 @@ const projectStyle = makeStyles(theme => ({
             width: '325px !important',
             height: '210px !important',
             background: 'white !important',
+            opacity: '.5',
             // border: '1px solid white',
         },
         '&:hover': {
@@ -175,7 +176,7 @@ const Projects = () => {
                 },
                 {
                     title_: 'Music player',
-                    imageSrc: myScreenshot,
+                    imageSrc: MusicPlayer,
                     desc_: 'A music player made in the early days of my journey.',
                     frontend: 'Pure JavaScript',
                     backend: 'None',
@@ -210,25 +211,25 @@ const Projects = () => {
         topSection: [
             {
                 title_: 'Project Verdure',
-                imageSrc: myScreenshot,
-                src: myScreenshot,
+                imageSrc: ComingSoon,
+                src: '',
                 state: 'development',
             },
             {
                 title_: 'Instrunet',
-                imageSrc: myScreenshot,
+                imageSrc: ComingSoon,
                 src: '',
                 state: 'development',
             },
             {
                 title_: 'IdeaHub',
-                imageSrc: myScreenshot,
+                imageSrc: ComingSoon,
                 src: '',
                 state: 'development',
             },
             {
                 title_: 'Lone Pair',
-                imageSrc: myScreenshot,
+                imageSrc: ComingSoon,
                 src: '',
                 state: 'development',
             },
@@ -236,25 +237,25 @@ const Projects = () => {
         bottomSection: [
             {
                 title_: 'Cova',
-                imageSrc: myScreenshot,
+                imageSrc: ComingSoon,
                 src: '',
                 state: 'development',
             },
             {
                 title_: 'Top Sales',
-                imageSrc: myScreenshot,
+                imageSrc: ComingSoon,
                 src: '',
                 state: 'development',
             },
             {
                 title_: 'Democrats',
-                imageSrc: myScreenshot,
+                imageSrc: ComingSoon,
                 src: '',
                 state: 'development',
             },
             {
                 title_: 'Haggle',
-                imageSrc: myScreenshot,
+                imageSrc: ComingSoon,
                 src: '',
                 state: 'development',
             },
