@@ -36,7 +36,7 @@ const cardStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(860)]: {
             width: '160px !important',
-            height: '100px !important',
+            height: '200px !important',
             margin: '13px !important'
         },
     },
@@ -44,6 +44,7 @@ const cardStyle = makeStyles(theme => ({
         width: '100px !important',
         height: '100px !important',
         margin: '30px !important',
+
     },
     langName: {
         fontSize: '1.23rem !important',
