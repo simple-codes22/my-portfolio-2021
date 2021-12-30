@@ -1,7 +1,7 @@
 import { makeStyles } from '@mui/styles';
 import { Box, Button, Typography } from '@mui/material';
 import { GitHub, LinkedIn, Twitter, Facebook, FileDownloadOutlined } from '@mui/icons-material';
-import resumeUrl from '../Backend/supabaseClient';
+import { resumeUrl } from '../Backend/supabaseClient';
 
 const footerStyle = makeStyles(theme => ({
     root: {

@@ -1,8 +1,9 @@
-// import { useState } from "react";
+import { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import { Box } from "@mui/system";
-import { TextField, Typography, Button } from "@mui/material";
+import { TextField, Typography, Button, Alert } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
+import { supabase } from "../../Backend/supabaseClient";
 
 const contactStyle = makeStyles(theme => ({
     root: {
@@ -67,32 +68,55 @@ const contactStyle = makeStyles(theme => ({
         '&:focused .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
             borderColor: 'blue !important'
         }
-    }
-
+    },
+    alertStyle: {
+        width: '500px',
+        height: '35px',
+        marginBottom: '10px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
 }))
 
 const Contact = () => {
     const useStyle = contactStyle();
+    const [message, changeMessage] = useState({
+        'Full Name': '',
+        'E-mail': '',
+        'Message': '',
+    });
+    const [state, changeState] = useState('Undecided');
+
+    const sendMessage = async () => {
+        await supabase
+        .from('Contact message')
+        .insert(message);
+        console.log("Message sent (sort of)");
+    }
+    const [alert, setAlert] = useState({severity: '', on: false, message: ''})
+    
+    const AlertSection = () => {
+        
+        if (alert.on) {
+            return (
+                <Alert className={useStyle.alertStyle} severity={alert.severity}>{alert.message}</Alert>
+            )
+        }
+        return (<></>)
+    };
 
     return (
         <Box component='div' className={useStyle.root}>
             <Box component='section' className={useStyle.main}>
                 <Typography
                     variant='h4' 
-                    data-aos='fade-in'
-                    data-aos-delay='500'
-                    data-aos-duration='1400'
-                    data-aos-once='true'
                     className={useStyle.Title}
                 >
                     Get In Touch
                 </Typography>
                 <Typography
                     variant='body1' 
-                    data-aos='fade-up'
-                    data-aos-delay='700'
-                    data-aos-duration='1400'
-                    data-aos-once='true'
                     className={useStyle.Info}
                 >
                     If you want to get in touch with me about a project collaboration or you just want to say hi, 
@@ -101,36 +125,35 @@ const Contact = () => {
                 <Box component='form' className={useStyle.form}>
                     <Box 
                         component='div' 
-                        data-aos='fade-in'
-                        data-aos-delay='750'
-                        data-aos-duration='1400'
-                        data-aos-once='true'
                         className={useStyle.textBox}
                     >
-                        <TextField className={useStyle.textField}label='Full Name' InputLabelProps={{style: {color: '#fff'}}} inputProps={{className: useStyle.mainText}} required type='text' variant='outlined' />
-                        <TextField className={useStyle.textField} type='email' InputLabelProps={{style: {color: '#ffffff'}}} inputProps={{className: useStyle.mainText}} label='E-Mail' required variant='outlined' />
+                        <TextField className={useStyle.textField} onChange={elem => {changeMessage({'Full Name': elem.target.value, 'E-mail': message['E-mail'], Message: message['Message']})}} label='Full Name' InputLabelProps={{style: {color: '#fff'}}} inputProps={{className: useStyle.mainText}} required type='text' variant='outlined' />
+                        <TextField className={useStyle.textField} onChange={elem => {changeMessage({'Full Name': message['Full Name'], 'E-mail': elem.target.value, Message: message['Message']})}} type='email' InputLabelProps={{style: {color: '#ffffff'}}} inputProps={{className: useStyle.mainText}} label='E-Mail' required variant='outlined' />
                     </Box>
-                    {/* <Box component='div' className={useStyle.textBox}>
-                    <TextField className={useStyle.emailField} type='email' InputLabelProps={{style: {color: '#ffffff94'}}} inputProps={{className: useStyle.mainText}} variant='outlined'></TextField>
-                    </Box> */}
                     <Box 
                         component='div' 
-                        data-aos='fade-in'
-                        data-aos-delay='750'
-                        data-aos-duration='1400'
-                        data-aos-once='true'
                         className={useStyle.textBox}
                     >
-                        <TextField label='Your Message' required className={useStyle.textarea} rows="10" InputLabelProps={{style: {color: '#fff'}}} multiline inputProps={{className: useStyle.mainText}} variant='outlined'></TextField>
+                        <TextField label='Your Message' onChange={elem => {changeMessage({'Full Name': message['Full Name'], 'E-mail': message['E-mail'], Message: elem.target.value})}} required className={useStyle.textarea} rows="10" InputLabelProps={{style: {color: '#fff'}}} multiline inputProps={{className: useStyle.mainText}} variant='outlined'></TextField>
                     </Box>
+                    <AlertSection />
                     <Button 
-                        variant='contained' 
-                        data-aos='fade-in'
-                        data-aos-delay='750'
-                        data-aos-duration='1400'
-                        data-aos-once='true'
+                        variant='contained'
                         endIcon={<SendIcon />} 
-                        onClick={(elem) => {elem.preventDefault();}}
+                        onClick={(elem) => {
+                            elem.preventDefault();
+                            if (message['Full Name'].length < 2 || message['E-mail'] < 2 || message['Message'] < 2) {
+                                changeState('Failure');
+                                setAlert({severity:'error' , on: true, message: 'The text in the required fields should be greater than 1 character'})
+                                return console.log('Message: ', state)
+                            }
+                            else {
+                                sendMessage();
+                                changeState('Success');
+                                setAlert({severity:'success' , on: true, message: 'Message sent successfully!!'})
+                                return console.log('Message: ', state);
+                            }
+                        }}
                     >
                         Submit
                     </Button>

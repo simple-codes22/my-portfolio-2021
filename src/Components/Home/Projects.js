@@ -41,7 +41,7 @@ const projectStyle = makeStyles(theme => ({
         alignItems: 'center !important',
         flexDirection: 'column !important',
         width: '325px !important',
-        height: '350px !important',
+        height: '360px !important',
         // border: '1px solid white !important',
         background: '#0601148d !important',
         margin: '15px !important',
@@ -77,10 +77,12 @@ const projectStyle = makeStyles(theme => ({
         fontSize: '14px !important',
     },
     PName: { // Project's Name
-        fontSize: '20px !important',
-        fontFamily:'Ubuntu Mono, monospace !important',
-        margin: '1px !important',
-        letterSpacing: '1px !important'
+        fontSize: '19px !important',
+        fontFamily:'Source Code Pro, monospace !important',
+        margin: '4px !important',
+        letterSpacing: '1px !important',
+        textAlign: 'center !important',
+        color: '#fffffff0'
     },
     langUsed: {
         color: '#dfddddea !important',
@@ -252,11 +254,25 @@ const Projects = () => {
     return (
         <Box component='div' id='projects' className={useStyle.root}>
             <Box component='div' className={useStyle.first}>
-                <Typography className={useStyle.subtitle} variant='h4'>
+                <Typography 
+                    className={useStyle.subtitle} 
+                    data-aos='fade-in'
+                    data-aos-delay='200'
+                    data-aos-duration='1300'
+                    data-aos-once='false'
+                    variant='h4'
+                >
                     Web Projects
                 </Typography>
                 <Box component='section' className={useStyle.normalProjects}>
-                    <Box component='div'className={useStyle.ProjectSection}>
+                    <Box
+                        component='div' 
+                        data-aos='fade-up'
+                        data-aos-delay='600'
+                        data-aos-duration='1500'
+                        data-aos-once='false'
+                        className={useStyle.ProjectSection}
+                    >
                     {projects.top.map(elem => { // An iteration of all the projects 
                         return (
                             <Box key={elem.title} component='div' className={useStyle.smallCard}>
@@ -279,7 +295,14 @@ const Projects = () => {
                     })
                     }
                     </Box>
-                    <Box component='div' className={useStyle.ProjectSection}>
+                    <Box
+                        component='div' 
+                        data-aos='fade-up'
+                        data-aos-delay='600'
+                        data-aos-duration='1500'
+                        data-aos-once='false'
+                        className={useStyle.ProjectSection}
+                    >
                     {projects.bottom.map(elem => { // An iteration of all the projects 
                         return (
                             <Box key={elem.title} component='div' className={useStyle.smallCard}>
@@ -305,11 +328,25 @@ const Projects = () => {
                 </Box>
             </Box>
             <Box component='div' className={useStyle.second}>
-                <Typography className={useStyle.subtitle} variant='h4'>
+                <Typography 
+                    className={useStyle.subtitle} 
+                    data-aos='fade-in'
+                    data-aos-delay='200'
+                    data-aos-duration='1300'
+                    data-aos-once='false'
+                    variant='h4'
+                >
                     Start-Up projects
                 </Typography>
                 <Box component='section' className={useStyle.startUp}>
-                    <Box component='div' className={useStyle.ProjectSection}>
+                    <Box
+                        component='div' 
+                        data-aos='fade-up'
+                        data-aos-delay='300'
+                        data-aos-duration='1500'
+                        data-aos-once='false'
+                        className={useStyle.ProjectSection}
+                    >
                         {startups.topSection.map(elem => {
                             if (elem.state === 'development') {
                                 return (
@@ -333,7 +370,14 @@ const Projects = () => {
                             }
                         })}
                     </Box>
-                    <Box component='section' className={useStyle.ProjectSection}>
+                    <Box
+                        component='div' 
+                        data-aos='fade-in'
+                        data-aos-delay='600'
+                        data-aos-duration='1500'
+                        data-aos-once='false'
+                        className={useStyle.ProjectSection}
+                    >
                         {startups.bottomSection.map(elem => {
                             if (elem.state === 'development') {
                                 return (

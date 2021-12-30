@@ -41,8 +41,9 @@ const cardStyle = makeStyles(theme => ({
         margin: '30px',
     },
     langName: {
-        fontSize: '1.2rem',
-        fontFamily: ''
+        fontSize: '1.23rem',
+        fontFamily: 'Source Code Pro, monospace !important',
+        letterSpacing: '.13px',
     },
     division: {
         display: 'flex',
@@ -140,7 +141,7 @@ export const DjangoCard = () => {
     return (
         <Box component='div' className={useStyle.root}>
             <img src={Django} alt='Django' className={useStyle.image} />
-            <Typography>Django</Typography>
+            <Typography component='p' className={useStyle.langName}>Django</Typography>
         </Box>
     )
 }

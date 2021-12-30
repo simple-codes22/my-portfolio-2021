@@ -14,7 +14,7 @@ import About from './Home/About';
 import Stacks from './Home/Stacks';
 import Projects from './Home/Projects';
 import Contact from './Home/Contact'
-import resumeUrl from "../Backend/supabaseClient";
+import { resumeUrl } from "../Backend/supabaseClient";
 
 
 const NavStyle = makeStyles(theme => ({
