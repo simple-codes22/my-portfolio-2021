@@ -18,6 +18,10 @@ const aboutStyle = makeStyles(theme => ({
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
+        [theme.breakpoints.down('laptop')]: {
+            width: '600px !important',
+            height: '700px !important'
+        }
     },
     aboutSection: {
         width: '700px !important',
