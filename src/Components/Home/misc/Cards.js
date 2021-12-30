@@ -51,7 +51,7 @@ const cardStyle = makeStyles(theme => ({
         fontFamily: 'Source Code Pro, monospace !important',
         letterSpacing: '.13px !important',
         [theme.breakpoints.down(860)]: {
-            
+            fontSize: '.8rem !important', 
         }
     },
     division: {
