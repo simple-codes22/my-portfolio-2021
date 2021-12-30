@@ -8,7 +8,8 @@ import myScreenshot from "../../Static/Images/projects/Netflix.png";
 import Netflix from "../../Static/Images/projects/Netflix.png";
 import iBlog from "../../Static/Images/projects/iBlog.png";
 import ECommerce from "../../Static/Images/projects/E-Commerce.png";
-// import myScreenshot from "../../Static/Images/projects/Netflix.png"
+import FutureView from "../../Static/Images/projects/FutureView.png"
+import Groove from "../../Static/Images/projects/Groove.png"
 
 const projectStyle = makeStyles(theme => ({
     root: {
@@ -185,7 +186,7 @@ const Projects = () => {
                 },
                 {
                     title_: 'Groove (landing Page)',
-                    imageSrc: myScreenshot,
+                    imageSrc: Groove,
                     desc_: 'My first ever landing page completed as a developer.',
                     frontend: 'HTML, CSS and JavaScript',
                     backend: 'None',
@@ -193,7 +194,7 @@ const Projects = () => {
                 },
                 {
                     title_: 'FutureView (Landing page)',
-                    imageSrc: myScreenshot,
+                    imageSrc: FutureView,
                     desc_: 'A generic landing page making use of pure JavaScript.',
                     frontend: 'HTML, CSS and JavaScript',
                     backend: 'None',
