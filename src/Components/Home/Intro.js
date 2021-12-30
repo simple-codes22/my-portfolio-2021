@@ -6,13 +6,13 @@ import Social from './misc/Social';
 
 const introStyle = makeStyles(theme => ({
     root: {
-        color: '#fff',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
+        color: '#fff !important',
+        display: 'flex !important',
+        justifyContent: 'center !important',
+        alignItems: 'center !important',
+        flexDirection: 'column !important',
         // position: 'relative',
-        background: '#22242b',
+        background: '#22242b !important',
     },
     main: {
         left: '30px !important',

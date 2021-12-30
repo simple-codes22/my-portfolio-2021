@@ -14,10 +14,10 @@ const aboutStyle = makeStyles(theme => ({
         flex: '1',
     },
     aboutImage: {
-        width:'700px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        width:'700px !important',
+        display: 'flex !important',
+        justifyContent: 'center !important',
+        alignItems: 'center !important',
     },
     aboutSection: {
         width: '700px !important',
@@ -39,9 +39,9 @@ const aboutStyle = makeStyles(theme => ({
         fontSize: '1.11rem !important',
     },
     mainImage: {
-        width: '350px',
-        height: '450px',
-        borderRadius: '10px',
+        width: '350px !important',
+        height: '450px !important',
+        borderRadius: '10px !important',
     }
 }))
 

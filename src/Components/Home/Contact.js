@@ -7,16 +7,16 @@ import { supabase } from "../../Backend/supabaseClient";
 
 const contactStyle = makeStyles(theme => ({
     root: {
-        color: 'white'
+        color: 'white !important'
     },
     main: {
-        display: 'flex',
-        flexDirection:'column',
-        alignItems:'center',
+        display: 'flex !important',
+        flexDirection:'column !important',
+        alignItems:'center !important',
         margin: 0,
     },
     Title: {
-        fontSize: '3rem'
+        fontSize: '3rem !important'
     },
     Info: {
         margin: '20px !important',
@@ -25,14 +25,14 @@ const contactStyle = makeStyles(theme => ({
         textAlign: 'center !important',
     },
     form: {
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: '40px',
+        display: 'flex !important',
+        flexDirection: 'column !important',
+        justifyContent: 'center !important',
+        alignItems: 'center !important',
+        margin: '40px !important',
     },
     textBox: {
-        margin: '20px',
+        margin: '20px !important',
     },
     textField: {
         borderRadius: '0 !important',
@@ -54,21 +54,21 @@ const contactStyle = makeStyles(theme => ({
     textarea: {
         width: '635px',
         '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#ffffff63',
-            borderRadius: '2px',
-            color: 'white',
+            borderColor: '#ffffff63 !important',
+            borderRadius: '2px !important',
+            color: 'white !important',
         },
         '&:focused .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
             borderColor: 'blue !important'
         }
     },
     alertStyle: {
-        width: '500px',
-        height: '35px',
-        marginBottom: '10px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
+        width: '500px !important',
+        height: '35px !important',
+        marginBottom: '10px !important',
+        display: 'flex !important',
+        justifyContent: 'center !important',
+        alignItems: 'center !important',
     },
 }))
 

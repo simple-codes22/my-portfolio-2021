@@ -13,42 +13,42 @@ import Supabase from '../../../Static/SVGs/Supabase.svg'
 
 const cardStyle = makeStyles(theme => ({
     cardSection: {
-        margin: '30px',
+        margin: '30px !important',
     },
     root: {
-        height: '260px',
-        width: '220px',
+        height: '260px !important',
+        width: '220px !important',
         // border: '1px solid white',
-        borderRadius: '3px',
-        margin: '20px',
-        display: 'inline-flex',
-        flexDirection: 'column',
+        borderRadius: '3px !important',
+        margin: '20px !important',
+        display: 'inline-flex !important',
+        flexDirection: 'column !important',
         // justifyContent: 'center',
-        alignItems: 'center',
-        overflow: 'hidden',
+        alignItems: 'center !important',
+        overflow: 'hidden !important',
         // backdropFilter: 'blur(20px)',
         background: '#0601148d !important',
         boxShadow: '0px 0px 10px #0a0b207b !important',
         [theme.breakpoints.down('laptop')]: {
-            width: '180px',
-            height: '220px',
-            margin: '15px',
+            width: '180px !important',
+            height: '220px !important',
+            margin: '15px !important',
         }
     },
     image: {
-        width: '100px',
-        height: '100px',
-        margin: '30px',
+        width: '100px !important',
+        height: '100px !important',
+        margin: '30px !important',
     },
     langName: {
-        fontSize: '1.23rem',
+        fontSize: '1.23rem !important',
         fontFamily: 'Source Code Pro, monospace !important',
-        letterSpacing: '.13px',
+        letterSpacing: '.13px !important',
     },
     division: {
-        display: 'flex',
-        justifyContent: 'space-evenly',
-        flexDirection: 'row',
+        display: 'flex !important',
+        justifyContent: 'space-evenly !important',
+        flexDirection: 'row !important',
     }
 }))
 
