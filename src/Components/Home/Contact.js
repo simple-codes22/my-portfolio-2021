@@ -16,9 +16,6 @@ const contactStyle = makeStyles(theme => ({
         margin: 0,
     },
     Title: {
-        // alignSelf:'flex-start',
-        // position: 'relative',
-        // left: '150px',
         fontSize: '3rem'
     },
     Info: {
@@ -44,15 +41,11 @@ const contactStyle = makeStyles(theme => ({
         width: '300px !important',
         outline: 'white !important',
         margin: '14px !important',
-        // borderBottomColor: 'white',
         '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
             borderColor: '#ffffff60 !important',
             borderRadius: '2px !important',
             color: 'white !important',
         },
-        // '&:focused .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-        //     borderColor: 'blue !important'
-        // }
     },
     mainText: {
         color: '#ececec !important',
@@ -86,7 +79,6 @@ const Contact = () => {
         'E-mail': '',
         'Message': '',
     });
-    const [state, changeState] = useState('Undecided');
 
     const sendMessage = async () => {
         await supabase
@@ -143,15 +135,13 @@ const Contact = () => {
                         onClick={(elem) => {
                             elem.preventDefault();
                             if (message['Full Name'].length < 2 || message['E-mail'] < 2 || message['Message'] < 2) {
-                                changeState('Failure');
                                 setAlert({severity:'error' , on: true, message: 'The text in the required fields should be greater than 1 character'})
-                                return console.log('Message: ', state)
+                                return
                             }
                             else {
                                 sendMessage();
-                                changeState('Success');
                                 setAlert({severity:'success' , on: true, message: 'Message sent successfully!!'})
-                                return console.log('Message: ', state);
+                                return;
                             }
                         }}
                     >
