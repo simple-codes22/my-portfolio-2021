@@ -30,6 +30,9 @@ const aboutStyle = makeStyles(theme => ({
     Title: {
         margin: "30px 0px !important",
         fontSize: '3rem !important',
+        [theme,.breakpoints.down('laptop')]: {
+            fontSize: '2.7rem !important',
+        }
     },
     inBold: {
         fontSize: '23px !important',
@@ -37,15 +40,26 @@ const aboutStyle = makeStyles(theme => ({
         margin: '10px 0px !important',
         textAlign: 'justify-all !important',
         letterSpacing: '1px !important',
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '18px !important',
+            letterSpacing: '.6px !important',
+        }
     },
     normal: {
         textAlign: 'justify !important',
         fontSize: '1.11rem !important',
+        [theme.breakpoints.down]: {
+            fontSize: '.8rem !important',
+        }
     },
     mainImage: {
         width: '350px !important',
         height: '450px !important',
         borderRadius: '10px !important',
+        [theme.breakpoints.down]: {
+            width: '335px !important',
+            height: '435px !important',
+        }
     }
 }))
 
