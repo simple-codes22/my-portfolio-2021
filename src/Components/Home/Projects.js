@@ -45,19 +45,24 @@ const projectStyle = makeStyles(theme => ({
         justifyContent: 'center !important',
         alignItems: 'center !important',
         flexDirection: 'column !important',
-        width: '325px !important',
+        width: '335px !important',
         height: '360px !important',
         // border: '1px solid white !important',
         background: '#0601148d !important',
         margin: '15px !important',
         borderRadius: '3px !important',
-        boxShadow: '0px 0px 10px #0a0b207b !important',
+        boxShadow: '0px 8px 6px -6px rgb(15 0 68 / 58%) !important',
+        transition: 'all .3s',
         // overflow: 'hidden !important',
         '& img': {
             width: '100% !important',
             height: '202px !important',
             // border: '1px solid green !important',
             // margin: '2px !important',
+        },
+        '&:hover': {
+            background: '#1c03639d !important',
+            boxShadow: '0px 8px 6px -6px rgb(15 0 68 / 58%) !important',
         }
     },
     anchors: {
