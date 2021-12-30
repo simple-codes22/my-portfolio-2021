@@ -30,7 +30,7 @@ const aboutStyle = makeStyles(theme => ({
     Title: {
         margin: "30px 0px !important",
         fontSize: '3rem !important',
-        [theme,.breakpoints.down('laptop')]: {
+        [theme.breakpoints.down('laptop')]: {
             fontSize: '2.7rem !important',
         }
     },
