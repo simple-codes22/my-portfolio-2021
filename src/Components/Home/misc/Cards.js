@@ -33,7 +33,12 @@ const cardStyle = makeStyles(theme => ({
             width: '180px !important',
             height: '220px !important',
             margin: '15px !important',
-        }
+        },
+        [theme.breakpoints.down(860)]: {
+            width: '160px !important',
+            height: '100px !important',
+            margin: '13px !important'
+        },
     },
     image: {
         width: '100px !important',
@@ -44,6 +49,9 @@ const cardStyle = makeStyles(theme => ({
         fontSize: '1.23rem !important',
         fontFamily: 'Source Code Pro, monospace !important',
         letterSpacing: '.13px !important',
+        [theme.breakpoints.down(860)]: {
+            
+        }
     },
     division: {
         display: 'flex !important',

@@ -9,6 +9,9 @@ const stackStyle = makeStyles(theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
+        [theme.breakpoints.down('laptop')]: {
+
+        },
     },
     Title: {
         textAlign: 'center !important',
