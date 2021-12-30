@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 
 const App = () => {
   return (
-    <Box component='div'>
+    <Box style={{background: '#22242b'}} component='div'>
       <Navigation />
       <Footer />
     </Box>
