@@ -56,7 +56,7 @@ const aboutStyle = makeStyles(theme => ({
         width: '350px !important',
         height: '450px !important',
         borderRadius: '10px !important',
-        [theme.breakpoints.down]: {
+        [theme.breakpoints.down('laptop')]: {
             width: '335px !important',
             height: '435px !important',
         }
