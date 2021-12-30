@@ -26,12 +26,13 @@ const aboutStyle = makeStyles(theme => ({
     aboutSection: {
         width: '700px !important',
         margin: '10px !important',
+        
     },
     Title: {
         margin: "30px 0px !important",
         fontSize: '3rem !important',
         [theme.breakpoints.down('laptop')]: {
-            fontSize: '2.7rem !important',
+            fontSize: '2.4rem !important',
         }
     },
     inBold: {
