@@ -1,9 +1,12 @@
-import { Box, Toolbar, AppBar, Avatar, Drawer, IconButton } from "@mui/material";
+import { Box, Toolbar, AppBar, Avatar, 
+    // Drawer,
+    //  IconButton
+     } from "@mui/material";
 import React from "react";
-import MenuIcon from '@mui/icons-material/Menu';
+// import MenuIcon from '@mui/icons-material/Menu';
 import One from './../Static/Images/One.png'; // This is actually my photo, i really don't know why i named it "One" I hope to change it during production
 import { makeStyles } from '@mui/styles';
-import {List, ListItem, ListItemText} from "@mui/material";
+// import {List, ListItem, ListItemText} from "@mui/material";
 import { 
     BrowserRouter as Router,
     // Route,
@@ -16,7 +19,7 @@ import Stacks from './Home/Stacks';
 import Projects from './Home/Projects';
 import Contact from './Home/Contact';
 import { resumeUrl } from "../Backend/supabaseClient";
-import { useState } from "react";
+// import { useState } from "react";
 
 
 const NavStyle = makeStyles(theme => ({
@@ -115,30 +118,30 @@ const NavStyle = makeStyles(theme => ({
 const Navigation = () => {
     const useStyle = NavStyle();
 
-    const [drawerState, setState] = useState(false);
+    // const [drawerState, setState] = useState(false);
     // Remember you haven't decided on the routing pattern 👆👆👆👆
-    const changeState = () => setState(false);
-    const List = () => (
-        <Box 
-            role="presentation"
-            onClick={setState(false)}
-        >
-        <List>
-            <ListItem button key='Home'>
-                <ListItemText primary='Home' />
-            </ListItem>
-            <ListItem button key='Projects'>
-                <ListItemText primary='Projects' />
-            </ListItem>
-            <ListItem button href='/#contact' key='Contact'>
-                <ListItemText primary='Contact' />
-            </ListItem>
-            <ListItem button key='Resume'>
-                <ListItemText primary='Resume' />
-            </ListItem>
-        </List>
-        </Box>
-    );
+    // const changeState = () => setState(false);
+    // const List = () => (
+    //     <Box 
+    //         role="presentation"
+    //         onClick={setState(false)}
+    //     >
+    //     <List>
+    //         <ListItem button key='Home'>
+    //             <ListItemText primary='Home' />
+    //         </ListItem>
+    //         <ListItem button key='Projects'>
+    //             <ListItemText primary='Projects' />
+    //         </ListItem>
+    //         <ListItem button href='/#contact' key='Contact'>
+    //             <ListItemText primary='Contact' />
+    //         </ListItem>
+    //         <ListItem button key='Resume'>
+    //             <ListItemText primary='Resume' />
+    //         </ListItem>
+    //     </List>
+    //     </Box>
+    // );
 
     return (
     <Router>
@@ -158,14 +161,12 @@ const Navigation = () => {
                     >
                         Résumé
                     </a>
-                    <React.Fragment>
-                        <IconButton className={useStyle.menuBar} onClick={() => setState(true)}>
-                            <MenuIcon />
-                        </IconButton>
-                        <Drawer anchor="right" open={drawerState} >
-                            <List />
-                        </Drawer>
-                    </React.Fragment>
+                        {/* <IconButton className={useStyle.menuBar} onClick={() => setState(true)}> */}
+                            {/* <MenuIcon /> */}
+                        {/* </IconButton> */}
+                        {/* <Drawer anchor="right" open={drawerState} > */}
+                            {/* <List /> */}
+                        {/* </Drawer> */}
                     {/* Note: I initially wanted to put a download icon beside the resume link */}
                 </Box>
             </Toolbar>
