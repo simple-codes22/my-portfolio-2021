@@ -16,13 +16,42 @@ const contactStyle = makeStyles(theme => ({
         margin: 0,
     },
     Title: {
-        fontSize: '3rem !important'
+        fontSize: '3rem !important',
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '2.4rem !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            fontsize: '2.25rem !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            fontSize: '2rem !important',
+        }
     },
     Info: {
         margin: '20px !important',
         fontSize: "1.37rem !important",
         width: '55% !important',
         textAlign: 'center !important',
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '1.3rem !important',
+            width: '760px !important',
+        },
+        [theme.breakpoints.down('mini')]: {
+            width: '700px !important',
+            fontSize: '1rem !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '635px !important',
+            fontSize: '.86rem !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            width: '600px !important',
+            fontSize: '.8rem !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            width: '530px !important',
+            fontSize: '.7rem !important',
+        }
     },
     form: {
         display: 'flex !important',
@@ -33,6 +62,12 @@ const contactStyle = makeStyles(theme => ({
     },
     textBox: {
         margin: '20px !important',
+        [theme.breakpoints.down('tablet')]: {
+            margin: '10px !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            margin: '2px !important',
+        }
     },
     textField: {
         borderRadius: '0 !important',
@@ -46,6 +81,14 @@ const contactStyle = makeStyles(theme => ({
             borderRadius: '2px !important',
             color: 'white !important',
         },
+        [theme.breakpoints.down('mini')]: {
+            width: '250px !important',
+            height: '60px !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            width: '250px !important',
+            margin: '7px !important',
+        }
     },
     mainText: {
         color: '#ececec !important',
@@ -60,6 +103,12 @@ const contactStyle = makeStyles(theme => ({
         },
         '&:focused .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
             borderColor: 'blue !important'
+        },
+        [theme.breakpoints.down('mini')]: {
+            width: '530px !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            // width: '500px !important',
         }
     },
     alertStyle: {
@@ -84,7 +133,7 @@ const Contact = () => {
         await supabase
         .from('Contact message')
         .insert(message);
-        console.log("Message sent (sort of)");
+        return;
     }
     const [alert, setAlert] = useState({severity: '', on: false, message: ''})
     

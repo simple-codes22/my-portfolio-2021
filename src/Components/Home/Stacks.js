@@ -9,20 +9,46 @@ const stackStyle = makeStyles(theme => ({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        [theme.breakpoints.down('laptop')]: {
-
-        },
     },
     Title: {
         textAlign: 'center !important',
         margin: "30px !important",
         fontSize: '3rem !important',
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '2.4rem !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            fontsize: '2.25rem !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            fontSize: '2rem !important',
+        }
     },
     Info: {
         // margin: '20px',
         fontSize: "1.37rem !important",
         width: '800px !important',
         textAlign: 'center !important',
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '1.3rem !important',
+            width: '760px !important',
+        },
+        [theme.breakpoints.down('mini')]: {
+            width: '700px !important',
+            fontSize: '1rem !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '635px !important',
+            fontSize: '.86rem !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            width: '600px !important',
+            fontSize: '.8rem !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            width: '530px !important',
+            fontSize: '.7rem !important',
+        }
     }
 }))
 

@@ -26,7 +26,6 @@ const cardStyle = makeStyles(theme => ({
         // justifyContent: 'center',
         alignItems: 'center !important',
         overflow: 'hidden !important',
-        // backdropFilter: 'blur(20px)',
         background: '#0601148d !important',
         boxShadow: '0px 0px 10px #0a0b207b !important',
         [theme.breakpoints.down('laptop')]: {
@@ -34,28 +33,53 @@ const cardStyle = makeStyles(theme => ({
             height: '220px !important',
             margin: '15px !important',
         },
-        [theme.breakpoints.down(860)]: {
+        [theme.breakpoints.down('mini')]: {
             width: '160px !important',
-            height: '200px !important',
+            height: '180px !important',
             margin: '13px !important'
         },
+        [theme.breakpoints.down('tablet')]: {
+            width: '140px !important',
+            height: '160px !important',
+            margin: '11px !important',
+        },[theme.breakpoints.down(650)]: {
+            width: '110px !important',
+            height: '140px !important',
+            margin: '9px !important',
+        }
     },
     image: {
         width: '100px !important',
         height: '100px !important',
         margin: '30px !important',
-        [theme.breakpoints.down(860)]: {
+        [theme.breakpoints.down('mini')]: {
             width: '75px !important',
             height: '75px !important',
-            margin: '25 !important',
+            margin: '25px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '60px !important',
+            height: '60px !important',
+            margin: '20px !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            width: '55px !important',
+            height: '55px !important',
+            margin: '15px !important',
         }
     },
     langName: {
         fontSize: '1.23rem !important',
         fontFamily: 'Source Code Pro, monospace !important',
         letterSpacing: '.13px !important',
-        [theme.breakpoints.down(860)]: {
-            fontSize: '.8rem !important', 
+        [theme.breakpoints.down('mini')]: {
+            fontSize: '1rem !important', 
+        },
+        [theme.breakpoints.down('tablet')]: {
+            fontSize: '.94rem !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            fontSize: '.86rem !important',
         }
     },
     division: {

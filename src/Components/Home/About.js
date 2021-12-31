@@ -21,18 +21,41 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down('laptop')]: {
             width: '600px !important',
             height: '700px !important'
+        },
+        [theme.breakpoints.down('mini')]: {
+            width: '550px !important',
+            height: '650px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '500px !important',
+            height: '600px !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            width: '450px !important',
+            height: '550px !important',
         }
     },
     aboutSection: {
         width: '700px !important',
         margin: '10px !important',
-        
+        [theme.breakpoints.down('mini')]: {
+            width: '640px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '600px !important',
+        }
     },
     Title: {
         margin: "30px 0px !important",
         fontSize: '3rem !important',
         [theme.breakpoints.down('laptop')]: {
             fontSize: '2.4rem !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            fontsize: '2.25rem !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            fontSize: '2rem !important',
         }
     },
     inBold: {
@@ -44,13 +67,27 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down('laptop')]: {
             fontSize: '18px !important',
             letterSpacing: '.6px !important',
+        },
+        [theme.breakpoints.down('mini')]: {
+            fontSize: '12px !important',
+            letterSpacing: '.4px !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            fontSize: '9px !important',
+            letterSpacing: '.25px !important',
         }
     },
     normal: {
         textAlign: 'justify !important',
         fontSize: '1.11rem !important',
-        [theme.breakpoints.down]: {
+        [theme.breakpoints.down('laptop')]: {
             fontSize: '.8rem !important',
+        },
+        [theme.breakpoints.down('mini')]: {
+            fontSize: '.58rem !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            fontSize: '.48rem !important',
         }
     },
     mainImage: {
@@ -60,6 +97,22 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down('laptop')]: {
             width: '315px !important',
             height: '415px !important',
+        },
+        [theme.breakpoints.down('mini')]: {
+            width: '280px !important',
+            height: '380px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '230px !important',
+            height: '300px !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            width: '200px !important',
+            height: '260px !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            width: '170px !important',
+            height: '220px !important',
         }
     }
 }))
