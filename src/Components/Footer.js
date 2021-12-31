@@ -24,6 +24,12 @@ const footerStyle = makeStyles(theme => ({
         position:'absolute !important',
         left: '80px !important',
         bottom: '20px !important',
+        [theme.breakpoints.down(1260)]: {
+            fontSize: '12.4px !important',
+        },
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '11.5px !important',
+        }
     },
     iconLinks: {
         textDecoration: 'none !important',
@@ -32,19 +38,38 @@ const footerStyle = makeStyles(theme => ({
         transition: '.3s ease all !important',
         '& > svg': {
             transition: '.3s ease-in-out all !important',
+            [theme.breakpoints.down(1260)]: {
+                height: '20px !important',
+                width: '20px !important',
+            },
+            [theme.breakpoints.down('laptop')]: {
+                height: '18px !important',
+                width: '18px !important',
+            }
         },
         '&:hover > svg': {
             fill: '#9a94ff !important'
+        },
+        [theme.breakpoints.down(1260)]: {
+            margin: '6.5px !important',
+        },
+        [theme.breakpoints.down('laptop')]: {
+            margin: '6px !important',
         }
     },
     alias: {
         letterSpacing: '1.4px !important',
         fontSize: '1.2rem !important',
+        [theme.breakpoints.down(1260)]: {
+            fontSize: '1.13rem !important',
+        },
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '1rem !important'
+        }
     },
     extras: {
         display: 'flex !important',
         flexDirection: 'row !important',
-
     },
     nav: {
         display: 'flex !important',
@@ -53,16 +78,26 @@ const footerStyle = makeStyles(theme => ({
         flexDirection: 'column !important',
         marginLeft: '450px !important',
         marginBottom: '10px !important',
-        // position: 'absolute !important',
-        // right: '100px !important',
     },
     navCover: {
         margin: '10px !important',
+        [theme.breakpoints.down(1260)]: {
+            margin: '9px !important',
+        },
+        [theme.breakpoints.down('laptop')]: {
+            margin: '8.6px !important',
+        }
     },
     navLinks: {
         color: 'white !important',
         fontSize: '15.2px !important',
-        textDecoration: 'none !important'
+        textDecoration: 'none !important',
+        [theme.breakpoints.down(1260)]: {
+            fontSize: '13px !important',
+        },
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '12.5px !important',
+        }
     },
     notes: {
         position: 'absolute !important',
@@ -72,7 +107,24 @@ const footerStyle = makeStyles(theme => ({
         marginTop: '30px !important',
         width: '400px !important',
         fontSize: '13px !important',
-
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '12px !important',
+        }
+    },
+    resBtn: {
+        height: '32px !important',
+        width: '90px !important',
+        marginLeft: '9px !important',
+        fontSize: '14px !important',
+        textTransform:'capitalize !important',
+        [theme.breakpoints.down(1260)]: {
+            width: '85px !important',
+            height: '29px !important',
+            fontSize: '13px !important',
+        },
+        [theme.breakpoints.down('mini')]: {
+        }
+        
     }
 }))
 
@@ -107,13 +159,7 @@ const Footer = () => {
                             target='_blank'
                             rel='noreferrer'
                             variant='contained' 
-                            style={{
-                            height: '32px !important',
-                            width: '88px !important',
-                            marginLeft: '9px !important',
-                            fontSize: '14 !important',
-                            textTransform:'capitalize !important',
-                        }} endIcon={<FileDownloadOutlined />}>Resume</Button>
+                            className={useStyle.resBtn} endIcon={<FileDownloadOutlined />}>Resume</Button>
                     </Box>
                 </Box>
             <Box component='div' className={useStyle.credits}>

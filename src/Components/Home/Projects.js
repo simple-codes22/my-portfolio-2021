@@ -554,7 +554,7 @@ const Projects = () => {
                         {startups.topSection.map(elem => {
                             if (elem.state === 'development') {
                                 return (
-                                    <Box component='div' className={useStyle.Card}>
+                                    <Box key={elem.title_} component='div' className={useStyle.Card}>
                                         <Box component='div' className={`${useStyle.image} ${useStyle.Development}`}>
                                             <img src={elem.imageSrc} alt={elem.title_} />
                                         </Box>
@@ -564,7 +564,7 @@ const Projects = () => {
                                 )
                             } else {
                                 return (
-                                    <Box component='div' className={useStyle.Card}>
+                                    <Box key={elem.title_} component='div' className={useStyle.Card}>
                                         <Box component='div' className={useStyle.image}>
                                             <img src={elem.imageSrc} alt={elem.title_} />
                                         </Box>
