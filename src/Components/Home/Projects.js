@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles"
 import { Box, Button, Typography } from '@mui/material';
-import { GitHub, ImportantDevices } from "@mui/icons-material";
+import { GitHub } from "@mui/icons-material";
 import PreviewIcon from '@mui/icons-material/Preview';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import { useState } from "react";

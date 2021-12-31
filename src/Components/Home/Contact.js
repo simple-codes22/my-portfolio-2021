@@ -59,6 +59,9 @@ const contactStyle = makeStyles(theme => ({
         justifyContent: 'center !important',
         alignItems: 'center !important',
         margin: '40px !important',
+        [theme.breakpoints.down('smart')]: {
+            margin: '20px !important',
+        }
     },
     textBox: {
         margin: '20px !important',
@@ -73,7 +76,7 @@ const contactStyle = makeStyles(theme => ({
         borderRadius: '0 !important',
         outlineColor: 'white !important',
         borderColor: 'white !important',
-        width: '300px !important',
+        width: '350px !important',
         outline: 'white !important',
         margin: '14px !important',
         '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline, &:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
@@ -89,7 +92,7 @@ const contactStyle = makeStyles(theme => ({
             width: '230px !important',
         },
         [theme.breakpoints.down('smart')]: {
-            width: '250px !important',
+            width: '220px !important',
             margin: '7px !important',
         }
     },
@@ -111,7 +114,7 @@ const contactStyle = makeStyles(theme => ({
             width: '530px !important',
         },
         [theme.breakpoints.down('smart')]: {
-            // width: '500px !important',
+            width: '480px !important',
         }
     },
     alertStyle: {
@@ -121,7 +124,24 @@ const contactStyle = makeStyles(theme => ({
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
+        [theme.breakpoints.down('mini')]: {
+            width: '450px !important',
+            height: '30px !important',
+            fontSize: '10px !important',
+            margin: '10px !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            width: '350px !important',
+            height: '20px !important',
+            fontSize: '9px !important',
+        }
     },
+    submitButton: {
+        [theme.breakpoints.down('laptop')]: {
+            margin: '5px',
+            // width
+        }
+    }
 }))
 
 const Contact = () => {
@@ -196,6 +216,7 @@ const Contact = () => {
                                 return;
                             }
                         }}
+                        className={useStyle.submitButton}
                     >
                         Submit
                     </Button>
