@@ -18,6 +18,9 @@ const footerStyle = makeStyles(theme => ({
         position:'absolute !important',
         right: '100px !important',
         bottom: '20px !important',
+        [theme.breakpoints.down('mini')]: {
+            right: '80px !important',
+        } // Do here
     },
     tradeMark: {
         fontSize: '13px !important',
@@ -29,7 +32,10 @@ const footerStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('laptop')]: {
             fontSize: '11.5px !important',
-        }
+        },
+        [theme.breakpoints.down('mini')]: {
+            fontSize: '10px !important',
+        } // Do here
     },
     iconLinks: {
         textDecoration: 'none !important',
@@ -45,7 +51,10 @@ const footerStyle = makeStyles(theme => ({
             [theme.breakpoints.down('laptop')]: {
                 height: '18px !important',
                 width: '18px !important',
-            }
+            },
+            [theme.breakpoints.down('mini')]: {
+                height: '16px !important'
+            } // Do here
         },
         '&:hover > svg': {
             fill: '#9a94ff !important'
@@ -55,7 +64,7 @@ const footerStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('laptop')]: {
             margin: '6px !important',
-        }
+        },
     },
     alias: {
         letterSpacing: '1.4px !important',
@@ -65,7 +74,10 @@ const footerStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('laptop')]: {
             fontSize: '1rem !important'
-        }
+        },
+        [theme.breakpoints.down('mini')]: {
+            fontSize: '.85rem !important'
+        } // Do here
     },
     extras: {
         display: 'flex !important',
@@ -86,7 +98,7 @@ const footerStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('laptop')]: {
             margin: '8.6px !important',
-        }
+        },
     },
     navLinks: {
         color: 'white !important',
@@ -97,11 +109,17 @@ const footerStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('laptop')]: {
             fontSize: '12.5px !important',
-        }
+        },
+        [theme.breakpoints.down('mini')]: {
+            fontSize: '12px !important',
+        } // Do here
     },
     notes: {
         position: 'absolute !important',
         left: '80px !important',
+        [theme.breakpoints.down('mini')]: {
+            left: '70px !important',
+        } // Do here
     },
     desc: {
         marginTop: '30px !important',
@@ -109,7 +127,10 @@ const footerStyle = makeStyles(theme => ({
         fontSize: '13px !important',
         [theme.breakpoints.down('laptop')]: {
             fontSize: '12px !important',
-        }
+        },
+        [theme.breakpoints.down('mini')]: {
+            fontSize: '11px !important',
+        } // Do here
     },
     resBtn: {
         height: '32px !important',
@@ -122,8 +143,7 @@ const footerStyle = makeStyles(theme => ({
             height: '29px !important',
             fontSize: '13px !important',
         },
-        [theme.breakpoints.down('mini')]: {
-        }
+        [theme.breakpoints.down('smart')]: {} // Do here
         
     }
 }))
