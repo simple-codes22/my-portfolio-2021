@@ -21,22 +21,70 @@ const introStyle = makeStyles(theme => ({
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
-        background: '#22242b !important'
-    },
-    greeting: {
-        fontSize: '19px !important',
+        background: '#22242b !important',
     },
     Title: {
         fontSize: '47px !important',
         textAlign:"center !important",
         width: '950px !important',
+        [theme.breakpoints.down('laptop')]: {
+            fontSize: '38px !important',
+            width: '820px !important'
+        },
+        [theme.breakpoints.down('mini')]: {
+        fontSize: '33px !important',
+        width: '700px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            fontSize: '24px !important',
+            width: '600px !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            fontSize: '20px !important',
+            width: '520px !important',
+        },
+        [theme.breakpoints.down(530)]: {
+            width: '430px !important',
+            fontSize: '16px !important',
+        },
+        [theme.breakpoints.down(425)]: {
+            width: '340px !important',
+            fontSize: '12px !important',
+        },
+        [theme.breakpoints.down(380)]: {
+            width: '280px !important',
+        }
     },
     statement: {
         margin: '20px !important',
         fontSize: '1.14rem !important',
         width: '800px !important',
         textAlign: 'center !important',
-        color: '#ffffffa2 !important'
+        color: '#ffffffa2 !important',
+        [theme.breakpoints.down('laptop')]: {
+            width: '700px !important',
+            fontSize: '16.32px !important',
+        },
+        [theme.breakpoints.down('mini')]: {
+            width: '600px !important',
+            fontSize: '12.8px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            fontSize: '11.2px !important',
+            width: '430px !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            fontSize: '8px !important',
+            width: '360px !important',
+        },
+        [theme.breakpoints.down(530)]: {
+            width: '250px !important',
+            fontSize: '6.4px !important'
+        },
+        [theme.breakpoints.down(425)]: {
+            width: '200px !important',
+            fontSize: '5.9px !important',
+        }
     },
     projectBtn: {
         background: '#635bfc !important',
@@ -47,6 +95,22 @@ const introStyle = makeStyles(theme => ({
         '&:hover': {
             background: 'white !important',
             color: '#635bfc !important'
+        },
+        [theme.breakpoints.down('laptop')]: {
+            width: '140px !important',
+            height: '45px !important',
+            fontSize: '14.08px',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '100px !important',
+            height: '45px !important',
+            fontSize: '8px !important',
+        },
+        [theme.breakpoints.down('smart')]: {
+            margin: '30px !important',
+            width: '80px !important',
+            height: '25px !important',
+            fontSize: '5px !important',
         }
     }
 }))

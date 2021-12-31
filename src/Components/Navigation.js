@@ -1,8 +1,9 @@
-import { Box, Toolbar, AppBar, Avatar } from "@mui/material";
+import { Box, Toolbar, AppBar, Avatar, Drawer, IconButton } from "@mui/material";
+import React from "react";
+import MenuIcon from '@mui/icons-material/Menu';
 import One from './../Static/Images/One.png'; // This is actually my photo, i really don't know why i named it "One" I hope to change it during production
-// import useState from 'react'
 import { makeStyles } from '@mui/styles';
-// import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import {List, ListItem, ListItemText} from "@mui/material";
 import { 
     BrowserRouter as Router,
     // Route,
@@ -13,8 +14,9 @@ import Intro from './Home/Intro';
 import About from './Home/About';
 import Stacks from './Home/Stacks';
 import Projects from './Home/Projects';
-import Contact from './Home/Contact'
+import Contact from './Home/Contact';
 import { resumeUrl } from "../Backend/supabaseClient";
+import { useState } from "react";
 
 
 const NavStyle = makeStyles(theme => ({
@@ -30,10 +32,23 @@ const NavStyle = makeStyles(theme => ({
         cursor: 'default',
         letterSpacing: '1.4px',
         // color: '#f5efe7'
-        color: '#eedfce'
+        color: '#eedfce',
+        [theme.breakpoints.down('tablet')]: {
+            fontSize: '12px !important',
+            letterSpacing: '.8px !important',
+        },
+        [theme.breakpoints.down(400)]: {
+            fontSize: '10px !important',
+            letterSpacing: '.6px !important',
+        }
     },
     avatar: {
-        margin: '10px',
+        margin: '10px !important',
+        [theme.breakpoints.down('tablet')]: {
+            margin: '5px !important',
+            width: '27px !important',
+            height: '27px !important',
+        }
     }
     ,
     linkList: {
@@ -41,15 +56,28 @@ const NavStyle = makeStyles(theme => ({
         right: '50px',
     },
     link: {
+        display:'inline-block',
         color:'white',
         margin: '10px',
         textDecoration:'none',
-        transition: 'color .3s ease',
+        transition: 'all .3s ease',
         '& svg': {
             fill: '#fff'
         },
         '&:hover': {
             color: '#040405'
+        },
+        [theme.breakpoints.down('tablet')]: {
+            display: 'none',
+        }
+    }, altLink: {
+        display:'inline-block',
+        color:'white',
+        margin: '10px',
+        textDecoration:'none',
+        transition: 'all .3s ease',
+        '& svg': {
+            fill: '#fff'
         }
     },
     mainView: {
@@ -64,16 +92,53 @@ const NavStyle = makeStyles(theme => ({
             alignItems: 'center',
             background: '#22242b'
         }
-    }
+    },
+    menuBar: {
+        display:'flex !important',
+        justifyContent: 'center',
+        alignItems: 'center',
+        '& svg': {
+            fill: '#ffffffe2',
+        },
+        [theme.breakpoints.up('tablet')]: {
+            display: 'none !important'
+        },
+        [theme.breakpoints.up(468)]: {
+            '& svg': {
+                height: '30px',
+                width: '30px',
+            }
+        },
+    },
 }))
 
 const Navigation = () => {
     const useStyle = NavStyle();
-    // const [clicking, setClick] = useState('Home');
-    // const Intro = () => {
-    //     return ()
-    // }
+
+    const [drawerState, setState] = useState(false);
     // Remember you haven't decided on the routing pattern 👆👆👆👆
+    const changeState = () => setState(false);
+    const List = () => (
+        <Box 
+            role="presentation"
+            onClick={setState(false)}
+        >
+        <List>
+            <ListItem button key='Home'>
+                <ListItemText primary='Home' />
+            </ListItem>
+            <ListItem button key='Projects'>
+                <ListItemText primary='Projects' />
+            </ListItem>
+            <ListItem button href='/#contact' key='Contact'>
+                <ListItemText primary='Contact' />
+            </ListItem>
+            <ListItem button key='Resume'>
+                <ListItemText primary='Resume' />
+            </ListItem>
+        </List>
+        </Box>
+    );
 
     return (
     <Router>
@@ -92,7 +157,15 @@ const Navigation = () => {
                         className={useStyle.link}
                     >
                         Résumé
-                    </a> 
+                    </a>
+                    <React.Fragment>
+                        <IconButton className={useStyle.menuBar} onClick={() => setState(true)}>
+                            <MenuIcon />
+                        </IconButton>
+                        <Drawer anchor="right" open={drawerState} >
+                            <List />
+                        </Drawer>
+                    </React.Fragment>
                     {/* Note: I initially wanted to put a download icon beside the resume link */}
                 </Box>
             </Toolbar>

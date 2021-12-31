@@ -23,7 +23,21 @@ const socialStyle = makeStyles(theme => ({
             background: '#f5f5f5',
             borderColor: '#f5f5f5',
         },
-        '&:hover svg': {fill: '#0e0c2b'}
+        '&:hover svg': {fill: '#0e0c2b'},
+        [theme.breakpoints.down('tablet')]: {
+            padding: '5px',
+            '& svg': {
+                height: '14px !important',
+                width: '14px !important'
+            }
+        },
+        [theme.breakpoints.down(345)]: {
+            padding: '3px !important',
+            '& svg': {
+                height: '10px !important',
+                width: '10px !important',
+            }
+        }
     },
 }))
 
