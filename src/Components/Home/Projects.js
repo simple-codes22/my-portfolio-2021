@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles"
 import { Box, Button, Typography } from '@mui/material';
-import { GitHub } from "@mui/icons-material";
+import { GitHub, ImportantDevices } from "@mui/icons-material";
 import PreviewIcon from '@mui/icons-material/Preview';
 import ConstructionIcon from '@mui/icons-material/Construction';
 import { useState } from "react";
@@ -51,9 +51,6 @@ const projectStyle = makeStyles(theme => ({
         letterSpacing: '.3px !important',
         fontSize: '1.7rem !important',
         margin: '20px !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
         [theme.breakpoints.down('laptop')]: { // For the tablet
 
         },
@@ -66,15 +63,6 @@ const projectStyle = makeStyles(theme => ({
         justifyContent: 'center !important',
         alignItems: 'center !important',
         flexDirection: 'column !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
-        [theme.breakpoints.down('laptop')]: { // For the tablet
-
-        },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
-        }
     },
     smallCard: {
         display: 'flex !important',
@@ -92,6 +80,12 @@ const projectStyle = makeStyles(theme => ({
         '& img': {
             width: '100% !important',
             height: '202px !important',
+            // [theme.breakpoints.down('laptop')]: {
+            //     height: '147px !important',
+            // },
+            [theme.breakpoints.down('tablet')]: {
+                height: '97px !important',
+            }
             // border: '1px solid green !important',
             // margin: '2px !important',
         },
@@ -99,23 +93,23 @@ const projectStyle = makeStyles(theme => ({
             background: '#1c03639d !important',
             boxShadow: '0px 8px 6px -6px rgb(15 0 68 / 58%) !important',
         },
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
         [theme.breakpoints.down('laptop')]: { // For the tablet
-
+            width: '280px !important',
+            height:'315px !Important',
         },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
+        [theme.breakpoints.down(910)]: { // For the mobile phone
+            width: '230px !important',
+            height: '265px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '170px !important',
+            height: '205px !important',
         }
     },
     anchors: {
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
         [theme.breakpoints.down('laptop')]: { // For the tablet
 
         },
@@ -133,10 +127,24 @@ const projectStyle = makeStyles(theme => ({
 
         },
         [theme.breakpoints.down('laptop')]: { // For the tablet
-
+            width: '86px !important',
+            height: '28px !important',
+            fontSize: '10px !important',
+        },
+        [theme.breakpoints.down(910)]: {
+            width: '76px !important',
+            height: '26px !important',
+            fontSize: '7px !important',
         },
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
+            width: '60px !important',
+            height: '16px !important',
+            fontSize: '4px !important',
+            borderRadius: '1.5px !important',
+            '& svg': {
+                height: '12px !important',
+                width: '12px !important',
+            }
         }
     },
     desc: {
@@ -147,14 +155,17 @@ const projectStyle = makeStyles(theme => ({
         margin: '3px !important',
         width: '290px !important',
         fontSize: '14px !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
         [theme.breakpoints.down('laptop')]: { // For the tablet
-
+            fontSize: '12px !important',
+            width: '250px !important',
         },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
+        [theme.breakpoints.down(910)]: { // For the mobile phone
+            fontSize: '10px !important',
+            width: '210px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            fontSize: '8px !important',
+            width: '170px !important',
         }
     },
     PName: { // Project's Name
@@ -164,14 +175,17 @@ const projectStyle = makeStyles(theme => ({
         letterSpacing: '1px !important',
         textAlign: 'center !important',
         color: '#fffffff0',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
         [theme.breakpoints.down('laptop')]: { // For the tablet
-
+            fontSize: '16px !important',
+            letterSpacing: '.8px !important',
+        },
+        [theme.breakpoints.down(910)]: {
+            fontSize: '13px !important',
+            letterSpacing: '.6px !important',
         },
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
+            fontSize: '10px !important',
+            letterSpacing: '.4px !important',
         }
     },
     langUsed: {
@@ -179,27 +193,18 @@ const projectStyle = makeStyles(theme => ({
         fontFamily: 'Source Code Pro, monospace !important',
         fontSize: '.8rem !important',
         textAlign: 'center !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
         [theme.breakpoints.down('laptop')]: { // For the tablet
-
+            fontSize: '.66rem !important',
+        },
+        [theme.breakpoints.down(910)]: {
+            fontSize: '.5rem !important',
         },
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
+            fontSize: '.44rem !important',
         }
     },
     ProjectSection: {
         display: 'flex !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
-        [theme.breakpoints.down('laptop')]: { // For the tablet
-
-        },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
-        }
     },
     startUp: {
         margin: '10px !important',
@@ -238,20 +243,64 @@ const projectStyle = makeStyles(theme => ({
             height: '210px !important',
             background: 'white !important',
             opacity: '.5',
+            [theme.breakpoints.down(1500)]: {
+                width: '300px !important',
+                height: '185px !important',
+            },
+            [theme.breakpoints.down(1245)]: {
+                width: '270px !important',
+                height: '155px !important',
+            },
+            [theme.breakpoints.down(1135)]: {
+                width: '240px !important',
+                height: '125px !important'
+            },
+            [theme.breakpoints.down(900)]: {
+                width: '180px !important',
+                height: '95px !important',
+            },
+            [theme.breakpoints.down('tablet')]: {
+                width: '150px !important',
+                height: '85px !important',
+            },
+            [theme.breakpoints.down(650)]: {
+                width: '130px !important',
+                height: '80px !important',
+            }
             // border: '1px solid white',
         },
         '&:hover': {
             background: '#1c03639d !important',
             boxShadow: '0px 8px 6px -6px rgb(15 0 68 / 58%) !important',
         },
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
+        [theme.breakpoints.down(1500)]: { // For the tablet
+            width: '300px !important',
+            height: '275px !important',
+            margin: '7px !important',
         },
-        [theme.breakpoints.down('laptop')]: { // For the tablet
-
+        [theme.breakpoints.down(1245)]: { // For the mobile phone
+            width: '270px !important',
+            height: '245px !important',
         },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
+        [theme.breakpoints.down(1135)]: {
+            width: '240px !important',
+            height: '215px !important',
+        },
+        [theme.breakpoints.down('laptop')]: {
+            width: '210px !important',
+            height: '195px !important',
+        }, 
+        [theme.breakpoints.down(900)]: {
+            width: '180px !important',
+            height: '165px !important',
+        },
+        [theme.breakpoints.down('tablet')]: {
+            width: '150px !important',
+            height: '155px !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            width: '130px !important',
+            height: '140px !important',
         }
     },
     startupTitle: {
@@ -260,14 +309,21 @@ const projectStyle = makeStyles(theme => ({
         fontSize: '22px !important',
         fontFamily:'Source Code Pro, monospace !important',
         letterSpacing: '.2px !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
+        [theme.breakpoints.down(1300)]: { // For the desktop
+            fontSize: '19px !important',
+        },
+        [theme.breakpoints.down(1135)]: {
+            fontSize: '17.5px !important'
         },
         [theme.breakpoints.down('laptop')]: { // For the tablet
-
+            fontSize: '14px !important',
+            margin: '8px !important',
         },
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
+            fontSize: '12px !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            fontSize: '8px !important',
         }
     },
     devStatement: {
@@ -277,14 +333,17 @@ const projectStyle = makeStyles(theme => ({
         fontSize: '14px !important',
         letterSpacing: '.15px !important',
         color: '#ffffff6e !important',
-        [theme.breakpoints.up]: { // For the desktop
-
+        [theme.breakpoints.down(1300)]: { // For the desktop
+            fontSize: '10px !important',
         },
         [theme.breakpoints.down('laptop')]: { // For the tablet
-
+            fontSize: '7.5px !important',
         },
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
+            fontSize: '6px !important',
+        },
+        [theme.breakpoints.down(650)]: {
+            fontSize: '4.5px !important',
         }
     }
 }))

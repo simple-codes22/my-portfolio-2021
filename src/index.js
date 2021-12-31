@@ -21,7 +21,7 @@ const mainTheme = createTheme({
     values: {
       mobile: 0,
       smart: 605,
-      tablet: 750,
+      tablet: 768,
       mini: 860,
       laptop: 1036,
       desktop: 1200,

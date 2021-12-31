@@ -44,9 +44,9 @@ const contactStyle = makeStyles(theme => ({
             width: '635px !important',
             fontSize: '.86rem !important',
         },
-        [theme.breakpoints.down(650)]: {
-            width: '600px !important',
-            fontSize: '.8rem !important',
+        [theme.breakpoints.down(675)]: {
+            width: '560px !important',
+            fontSize: '.77rem !important',
         },
         [theme.breakpoints.down('smart')]: {
             width: '530px !important',
@@ -84,6 +84,9 @@ const contactStyle = makeStyles(theme => ({
         [theme.breakpoints.down('mini')]: {
             width: '250px !important',
             height: '60px !important',
+        },
+        [theme.breakpoints.down(6750)]: {
+            width: '230px !important',
         },
         [theme.breakpoints.down('smart')]: {
             width: '250px !important',
