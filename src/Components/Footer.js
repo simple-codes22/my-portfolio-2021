@@ -21,7 +21,9 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('mini')]: {
             right: '80px !important',
         },
-        [theme.breakpoints.down('smart')]: {} // Do here
+        [theme.breakpoints.down('smart')]: {
+            right: '40px !important',
+        } // Do here
     },
     tradeMark: {
         fontSize: '13px !important',
@@ -37,7 +39,9 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('mini')]: {
             fontSize: '10px !important',
         } // Do here
-        ,[theme.breakpoints.down('smart')]: {} // Do here
+        ,[theme.breakpoints.down('smart')]: {
+            
+        } // Do here
     },
     iconLinks: {
         textDecoration: 'none !important',
@@ -120,7 +124,9 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('mini')]: {
             fontSize: '12px !important',
         }, // Do here
-        [theme.breakpoints.down('smart')]: {} // Do here
+        [theme.breakpoints.down('smart')]: {
+            fontSize: '10px !important',
+        } // Do here
     },
     notes: {
         position: 'absolute !important',
@@ -140,7 +146,10 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('mini')]: {
             fontSize: '11px !important',
         }, // Do here
-        [theme.breakpoints.down('smart')]: {} // Do here
+        [theme.breakpoints.down('smart')]: {
+            fontSize: '8px !important',
+            width: '340px !important',
+        } // Do here
     },
     resBtn: {
         height: '32px !important',
@@ -153,7 +162,11 @@ const footerStyle = makeStyles(theme => ({
             height: '29px !important',
             fontSize: '13px !important',
         },
-        [theme.breakpoints.down('smart')]: {} // Do here
+        [theme.breakpoints.down('smart')]: {
+            width: '75px !important',
+            height: '23px !important',
+            fontsize: ''
+        } // Do here
         
     }
 }))
@@ -193,7 +206,7 @@ const Footer = () => {
                     </Box>
                 </Box>
             <Box component='div' className={useStyle.credits}>
-                <Box component='div' className={useStyle.tradeMark}>&copy; 2021 Simeon Akanbi. All rights reserved.</Box>
+                <Box component='div' className={useStyle.tradeMark}>&copy; 2022 Simeon Akanbi. All rights reserved.</Box>
                 <Box component='div' className={useStyle.socialIcons}>
                     <a className={useStyle.iconLinks} href='https://www.github.com/simple-codes22'><GitHub /></a>
                     <a className={useStyle.iconLinks} href='https://www.github.com/simple-codes22'><LinkedIn /></a>
