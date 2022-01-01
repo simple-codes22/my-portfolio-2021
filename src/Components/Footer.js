@@ -206,7 +206,7 @@ const Footer = () => {
                     </Box>
                 </Box>
             <Box component='div' className={useStyle.credits}>
-                <Box component='div' className={useStyle.tradeMark}>&copy; 2021 Simeon Akanbi. All rights reserved.</Box>
+                <Box component='div' className={useStyle.tradeMark}>&copy; 2022 Simeon Akanbi. All rights reserved.</Box>
                 <Box component='div' className={useStyle.socialIcons}>
                     <a className={useStyle.iconLinks} href='https://www.github.com/simple-codes22'><GitHub /></a>
                     <a className={useStyle.iconLinks} href='https://www.github.com/simple-codes22'><LinkedIn /></a>
