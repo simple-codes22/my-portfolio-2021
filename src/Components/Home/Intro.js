@@ -17,7 +17,7 @@ const introStyle = makeStyles(theme => ({
     main: {
         left: '30px !important',
         flexDirection: 'column !important',
-        height: '100vh !important',
+        height: '300px !important',
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
