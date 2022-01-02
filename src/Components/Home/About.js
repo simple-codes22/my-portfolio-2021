@@ -103,7 +103,8 @@ const aboutStyle = makeStyles(theme => ({
             fontSize: '.48rem !important',
         },[theme.breakpoints.down(400)]: {
             textAlign: 'center !important',
-            fontSize:'.6rem !important',
+            margin: '5px !important',
+            fontSize:'.65rem !important',
         }
     },
     mainImage: {

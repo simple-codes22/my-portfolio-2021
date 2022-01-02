@@ -48,6 +48,9 @@ const stackStyle = makeStyles(theme => ({
         [theme.breakpoints.down('smart')]: {
             width: '530px !important',
             fontSize: '.7rem !important',
+        }, [theme.breakpoints.down(400)]: {
+            width: '330px !important',
+            fontSize: '.7rem !important',
         }
     }
 }))
