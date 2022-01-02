@@ -15,7 +15,7 @@ const footerStyle = makeStyles(theme => ({
         position: 'relative !important',
         [theme.breakpoints.down(400)]: {
             flexDirection: 'column !important',
-            height: '30vh !important',
+            height: '40vh !important',
             justifyContent: 'flex-end !important',
             alignItems: 'center !important',
         }
@@ -111,7 +111,7 @@ const footerStyle = makeStyles(theme => ({
             fontSize: '.85rem !important'
         }, // Do here
         [theme.breakpoints.down(400)]: {
-            textAlign: 'center',
+            textAlign: 'start !important',
             margin: '10px !important',
         } // Do here
     },
@@ -168,6 +168,9 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('smart')]: {},
         [theme.breakpoints.down(400)]: {
             position: 'static !important',
+            alignSelf: 'flex-start !important',
+            // left: '10px !important',
+            margin: '20px !important',
         }
     },
     desc: {
@@ -185,7 +188,10 @@ const footerStyle = makeStyles(theme => ({
             width: '340px !important',
         },
         [theme.breakpoints.down(400)]: {
-            display: 'none',
+            width: '250px !important',
+            margin: '10px !important',
+            // display: 'none',
+            // margin: '50px !important',
         }
     },
     resBtn: {
