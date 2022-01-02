@@ -59,8 +59,8 @@ const projectStyle = makeStyles(theme => ({
             [theme.breakpoints.down('tablet')]: {
                 height: '97px !important',
             },
-            [theme.breakpoints.down(400)]: {
-                height:'55px !important',
+            [theme.breakpoints.down('mobile')]: {
+                height:'55px !important'
             }
         },
         '&:hover': {
@@ -79,7 +79,7 @@ const projectStyle = makeStyles(theme => ({
             width: '170px !important',
             height: '205px !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             width: '95px !important',
             height: '115px !important',
             margin: '10px !important',
@@ -89,13 +89,13 @@ const projectStyle = makeStyles(theme => ({
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             display: 'none !important'
         }
     },
     iconAnchors: {
         display: 'none !important',
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             display: 'flex !important',
             justifyContent: 'center !important',
             alignItems: 'center !important',
@@ -126,7 +126,7 @@ const projectStyle = makeStyles(theme => ({
                 height: '12px !important',
                 width: '12px !important',
             }
-        }, [theme.breakpoints.down(400)]: {
+        }, [theme.breakpoints.down('mobile')]: {
             width: '20px !important',
             height: '20px !important',
             margin: '3px !important',
@@ -151,7 +151,7 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down('tablet')]: {
             fontSize: '8px !important',
             width: '170px !important',
-        }, [theme.breakpoints.down(400)]: {
+        }, [theme.breakpoints.down('mobile')]: {
             display: 'none !important',
         }
     },
@@ -173,7 +173,7 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
             fontSize: '10px !important',
             letterSpacing: '.4px !important',
-        }, [theme.breakpoints.down(400)]: {
+        }, [theme.breakpoints.down('mobile')]: {
             fontSize: '7.5px !important',
         }
     },
@@ -190,7 +190,7 @@ const projectStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
             fontSize: '.44rem !important',
-        }, [theme.breakpoints.down(400)]: {
+        }, [theme.breakpoints.down('mobile')]: {
             fontSize: '.36rem !important', // Come back for this 👈👈
         }
     },
@@ -249,7 +249,7 @@ const projectStyle = makeStyles(theme => ({
                 width: '130px !important',
                 height: '80px !important',
             },
-            [theme.breakpoints.down(400)]: {
+            [theme.breakpoints.down('mobile')]: {
                 width: '100% !important',
                 height: '55px !important',
             }
@@ -287,7 +287,7 @@ const projectStyle = makeStyles(theme => ({
             width: '130px !important',
             height: '140px !important',
         }, 
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             width: '84px !important',
             height: '100px !important',
             margin: '3px !important',
@@ -314,7 +314,7 @@ const projectStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             fontSize: '8px !important',
-        },[theme.breakpoints.down(400)]: {
+        },[theme.breakpoints.down('mobile')]: {
             margin: '4px !important',
         }
     },
@@ -337,7 +337,7 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down(650)]: {
             fontSize: '4.5px !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             '& svg': {
                 height: '15px !important',
                 width: '15px !important',

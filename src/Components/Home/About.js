@@ -34,7 +34,7 @@ const aboutStyle = makeStyles(theme => ({
             width: '450px !important',
             height: '550px !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             display: 'none !important',
         }
     },
@@ -46,7 +46,7 @@ const aboutStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('tablet')]: {
             width: '800px !important',
-        },[theme.breakpoints.down(400)]: {
+        },[theme.breakpoints.down('mobile')]: {
             width: '100vh !important',
         }
     },
@@ -62,7 +62,7 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down(650)]: {
             fontSize: '2rem !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             fontSize: '2rem !important',
             textAlign: 'center !important',
         },
@@ -84,7 +84,7 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down(650)]: {
             fontSize: '9px !important',
             letterSpacing: '.25px !important',
-        },[theme.breakpoints.down(400)]: {
+        },[theme.breakpoints.down('mobile')]: {
             textAlign: 'center !important',
             fontSize: '15px !important',
             letterSpacing: '.3px !important',
@@ -101,7 +101,7 @@ const aboutStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             fontSize: '.48rem !important',
-        },[theme.breakpoints.down(400)]: {
+        },[theme.breakpoints.down('mobile')]: {
             textAlign: 'center !important',
             margin: '5px !important',
             fontSize:'.65rem !important',
@@ -130,7 +130,7 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down('smart')]: {
             width: '170px !important',
             height: '220px !important',
-        },[theme.breakpoints.down(400)]: {
+        },[theme.breakpoints.down('mobile')]: {
             display: 'none',
         }
     }

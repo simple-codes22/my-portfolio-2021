@@ -31,7 +31,7 @@ const socialStyle = makeStyles(theme => ({
                 width: '14px !important'
             }
         },
-        [theme.breakpoints.down(345)]: {
+        [theme.breakpoints.down('mobile')]: {
             padding: '3px !important',
             '& svg': {
                 height: '10px !important',

@@ -19,8 +19,8 @@ const mainTheme = createTheme({
   },
   breakpoints: {
     values: {
-      mobile: 0,
-      diff: 530,
+      bottom: 0,
+      mobile: 570,
       smart: 605,
       tablet: 768,
       mini: 860,

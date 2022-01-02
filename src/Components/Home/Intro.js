@@ -13,7 +13,7 @@ const introStyle = makeStyles(theme => ({
         flexDirection: 'column !important',
         // position: 'relative',
         background: '#22242b !important',
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             height: '80vh'
         }
     },
@@ -25,7 +25,7 @@ const introStyle = makeStyles(theme => ({
         justifyContent: 'center !important',
         alignItems: 'center !important',
         background: '#22242b !important',
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             justifyContent: 'center !important',
             height: '80vh',
         }
@@ -121,7 +121,7 @@ const introStyle = makeStyles(theme => ({
             height: '25px !important',
             fontSize: '5px !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             width: '100px !important',
             height: '45px !important',
             fontSize: '10px !important',

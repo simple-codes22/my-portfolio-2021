@@ -52,7 +52,7 @@ const contactStyle = makeStyles(theme => ({
             width: '530px !important',
             fontSize: '.7rem !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             width: '330px !important',
             fontSize: '.7rem !important',
         }
@@ -92,7 +92,7 @@ const contactStyle = makeStyles(theme => ({
             width: '250px !important',
             height: '60px !important',
         },
-        [theme.breakpoints.down(6750)]: {
+        [theme.breakpoints.down(675)]: {
             width: '230px !important',
         },
         [theme.breakpoints.down('smart')]: {
@@ -133,7 +133,7 @@ const contactStyle = makeStyles(theme => ({
                 fontSize: '15px !important',
             }
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             width: '320px !important',
             '& label': {
                 fontSize: '12px !important',
@@ -157,7 +157,7 @@ const contactStyle = makeStyles(theme => ({
             width: '350px !important',
             height: '20px !important',
             fontSize: '9px !important',
-        }, [theme.breakpoints.down(400)]: {
+        }, [theme.breakpoints.down('mobile')]: {
             width: '300px !important',
             height: '35px !important',
             fontSize: '11px !important',
@@ -168,7 +168,7 @@ const contactStyle = makeStyles(theme => ({
         [theme.breakpoints.down('laptop')]: {
             margin: '5px',
             // width
-        }, [theme.breakpoints.down(400)]: {
+        }, [theme.breakpoints.down('mobile')]: {
             margin: '10px !important',
             letterSpacing: '.27px',
         }

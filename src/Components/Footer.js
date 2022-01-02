@@ -13,7 +13,7 @@ const footerStyle = makeStyles(theme => ({
         justifyContent:"center  !important",
         alignItems: 'center !important',
         position: 'relative !important',
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             flexDirection: 'column !important',
             height: '40vh !important',
             justifyContent: 'flex-end !important',
@@ -30,12 +30,12 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('smart')]: {
             right: '40px !important',
         }, // Do here
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             position: 'static !important',
         }
     },
     credits: {
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             display: 'flex !important',
             justifyContent: 'flex-end !important',
             alignItems: 'center !important',
@@ -59,7 +59,7 @@ const footerStyle = makeStyles(theme => ({
         ,[theme.breakpoints.down('smart')]: {
             
         }, // Do here
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             position: 'static !important',
             margin: '20px !important',
             color: '#ffffff8f'
@@ -83,7 +83,7 @@ const footerStyle = makeStyles(theme => ({
             [theme.breakpoints.down('mini')]: {
                 height: '16px !important'
             }, // Do here
-            [theme.breakpoints.down(400)]: {
+            [theme.breakpoints.down('mobile')]: {
                 height: '20px !important',
                 width: '20px !important',
             } // Do here
@@ -111,7 +111,7 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('mini')]: {
             fontSize: '.85rem !important'
         }, // Do here
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             textAlign: 'center !important',
             margin: '10px !important',
         } // Do here
@@ -119,7 +119,7 @@ const footerStyle = makeStyles(theme => ({
     extras: {
         display: 'flex !important',
         flexDirection: 'row !important',
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             flexDirection: 'column !important',
         }
     },
@@ -130,7 +130,7 @@ const footerStyle = makeStyles(theme => ({
         flexDirection: 'column !important',
         marginLeft: '450px !important',
         marginBottom: '10px !important',
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             display: 'none !important',
         }
     },
@@ -167,7 +167,7 @@ const footerStyle = makeStyles(theme => ({
             left: '70px !important',
         }, // Do here
         [theme.breakpoints.down('smart')]: {},
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             position: 'static !important',
             alignSelf: 'flex-start !important',
             // left: '10px !important',
@@ -188,7 +188,7 @@ const footerStyle = makeStyles(theme => ({
             fontSize: '8px !important',
             width: '340px !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             width: '250px !important',
             textAlign: 'center !important',
             margin: '2px !important'

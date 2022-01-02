@@ -46,7 +46,7 @@ const cardStyle = makeStyles(theme => ({
             width: '110px !important',
             height: '140px !important',
             margin: '9px !important',
-        }, [theme.breakpoints.down(400)]: {
+        }, [theme.breakpoints.down('mobile')]: {
             justifyContent: 'center',
             alignItems: 'center',
             width: '77px !important',
@@ -73,7 +73,7 @@ const cardStyle = makeStyles(theme => ({
             height: '55px !important',
             margin: '15px !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             width: '80% !important',
             margin: '0 !important',
             height: '80% !important',
@@ -91,7 +91,7 @@ const cardStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             fontSize: '.86rem !important',
-        }, [theme.breakpoints.down(400)]: {
+        }, [theme.breakpoints.down('mobile')]: {
             display: 'none !important',
         }
     },

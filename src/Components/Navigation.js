@@ -40,7 +40,7 @@ const NavStyle = makeStyles(theme => ({
             fontSize: '12px !important',
             letterSpacing: '.8px !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             fontSize: '10px !important',
             letterSpacing: '.6px !important',
         }
@@ -52,7 +52,7 @@ const NavStyle = makeStyles(theme => ({
             width: '27px !important',
             height: '27px !important',
         },
-        [theme.breakpoints.down(400)]: {
+        [theme.breakpoints.down('mobile')]: {
             width: '24px !important',
             height: '24px !important',
         }
