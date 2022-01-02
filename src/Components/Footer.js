@@ -253,7 +253,7 @@ const Footer = () => {
             <Box component='div' className={useStyle.credits}>
                 <Box component='div' className={useStyle.socialIcons}>
                     <a className={useStyle.iconLinks} href='https://www.github.com/simple-codes22'><GitHub /></a>
-                    <a className={useStyle.iconLinks} href='https://www.github.com/simple-codes22'><LinkedIn /></a>
+                    <a className={useStyle.iconLinks} href='https://www.linkedin.com/in/simple-codes22'><LinkedIn /></a>
                     <a className={useStyle.iconLinks} href='https://www.twitter.com/simple-codes'><Twitter /></a>
                     <a className={useStyle.iconLinks} href='https://www.facebook.com/'><Facebook /></a>
                 </Box>
