@@ -21,15 +21,6 @@ const projectStyle = makeStyles(theme => ({
         alignItems: 'center !important',
         position: 'relative !important',
         overflow: 'hidden !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
-        [theme.breakpoints.down('laptop')]: { // For the tablet
-
-        },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
-        }
     },
     first: {
         display: 'flex !important',
@@ -42,12 +33,6 @@ const projectStyle = makeStyles(theme => ({
         letterSpacing: '.3px !important',
         fontSize: '1.7rem !important',
         margin: '20px !important',
-        [theme.breakpoints.down('laptop')]: { // For the tablet
-
-        },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
-        }
     },
     normalProjects: {
         display: 'flex !important',
@@ -71,14 +56,12 @@ const projectStyle = makeStyles(theme => ({
         '& img': {
             width: '100% !important',
             height: '202px !important',
-            // [theme.breakpoints.down('laptop')]: {
-            //     height: '147px !important',
-            // },
             [theme.breakpoints.down('tablet')]: {
                 height: '97px !important',
+            },
+            [theme.breakpoints.down(400)]: {
+                height:'55px !important',
             }
-            // border: '1px solid green !important',
-            // margin: '2px !important',
         },
         '&:hover': {
             background: '#1c03639d !important',
@@ -95,18 +78,17 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down('tablet')]: {
             width: '170px !important',
             height: '205px !important',
+        },
+        [theme.breakpoints.down(400)]: {
+            width: '95px !important',
+            height: '115px !important',
+            margin: '10px !important',
         }
     },
     anchors: {
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
-        [theme.breakpoints.down('laptop')]: { // For the tablet
-
-        },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
-        }
     },
     anchorBtns: {
         width:'96px !important',
@@ -114,9 +96,6 @@ const projectStyle = makeStyles(theme => ({
         margin: '8px !important',
         fontSize: '13px !important',
         fontFamily: 'Noto Sans, sans-serif !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
         [theme.breakpoints.down('laptop')]: { // For the tablet
             width: '86px !important',
             height: '28px !important',
@@ -136,6 +115,8 @@ const projectStyle = makeStyles(theme => ({
                 height: '12px !important',
                 width: '12px !important',
             }
+        },[theme.breakpoints.down(400)]: {
+            width: ''
         }
     },
     desc: {
@@ -157,6 +138,8 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down('tablet')]: {
             fontSize: '8px !important',
             width: '170px !important',
+        }, [theme.breakpoints.down(400)]: {
+            display: 'none !important',
         }
     },
     PName: { // Project's Name
@@ -177,6 +160,8 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
             fontSize: '10px !important',
             letterSpacing: '.4px !important',
+        }, [theme.breakpoints.down(400)]: {
+            fontSize: '5.5px !important',
         }
     },
     langUsed: {
@@ -192,6 +177,8 @@ const projectStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
             fontSize: '.44rem !important',
+        }, [theme.breakpoints.down(400)]: {
+            fontSize: '.34rem !important', // Come back for this 👈👈
         }
     },
     ProjectSection: {
