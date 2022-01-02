@@ -83,8 +83,9 @@ const footerStyle = makeStyles(theme => ({
             [theme.breakpoints.down('mini')]: {
                 height: '16px !important'
             }, // Do here
-            [theme.breakpoints.down('smart')]: {
-                
+            [theme.breakpoints.down(400)]: {
+                height: '20px !important',
+                width: '20px !important',
             } // Do here
         },
         '&:hover > svg': {
@@ -111,7 +112,7 @@ const footerStyle = makeStyles(theme => ({
             fontSize: '.85rem !important'
         }, // Do here
         [theme.breakpoints.down(400)]: {
-            textAlign: 'start !important',
+            textAlign: 'center !important',
             margin: '10px !important',
         } // Do here
     },
@@ -189,7 +190,8 @@ const footerStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(400)]: {
             width: '250px !important',
-            margin: '10px !important',
+            textAlign: 'center !important',
+            margin: '2px !important'
             // display: 'none',
             // margin: '50px !important',
         }
