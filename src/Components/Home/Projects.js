@@ -1,5 +1,5 @@
 import { makeStyles } from "@mui/styles"
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, IconButton, Typography } from '@mui/material';
 import { GitHub } from "@mui/icons-material";
 import PreviewIcon from '@mui/icons-material/Preview';
 import ConstructionIcon from '@mui/icons-material/Construction';
@@ -89,6 +89,17 @@ const projectStyle = makeStyles(theme => ({
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
+        [theme.breakpoints.down(400)]: {
+            display: 'none !important'
+        }
+    },
+    iconAnchors: {
+        display: 'none !important',
+        [theme.breakpoints.down(400)]: {
+            display: 'flex !important',
+            justifyContent: 'center !important',
+            alignItems: 'center !important',
+        }
     },
     anchorBtns: {
         width:'96px !important',
@@ -115,8 +126,10 @@ const projectStyle = makeStyles(theme => ({
                 height: '12px !important',
                 width: '12px !important',
             }
-        },[theme.breakpoints.down(400)]: {
-            width: ''
+        }, [theme.breakpoints.down(400)]: {
+            width: '20px !important',
+            height: '20px !important',
+            margin: '3px !important',
         }
     },
     desc: {
@@ -161,7 +174,7 @@ const projectStyle = makeStyles(theme => ({
             fontSize: '10px !important',
             letterSpacing: '.4px !important',
         }, [theme.breakpoints.down(400)]: {
-            fontSize: '5.5px !important',
+            fontSize: '7.5px !important',
         }
     },
     langUsed: {
@@ -178,7 +191,7 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down('tablet')]: { // For the mobile phone
             fontSize: '.44rem !important',
         }, [theme.breakpoints.down(400)]: {
-            fontSize: '.34rem !important', // Come back for this 👈👈
+            fontSize: '.36rem !important', // Come back for this 👈👈
         }
     },
     ProjectSection: {
@@ -190,15 +203,6 @@ const projectStyle = makeStyles(theme => ({
         justifyContent: 'center !important',
         alignItems: 'center !important',
         flexDirection: 'column !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
-        [theme.breakpoints.down('laptop')]: { // For the tablet
-
-        },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
-        }
     },
     Card: {
         display: 'flex !important',
@@ -472,6 +476,10 @@ const Projects = () => {
                                     <Button className={useStyle.anchorBtns} variant='contained' color='primary' endIcon={<PreviewIcon />}>Preview</Button>
                                     <Button className={useStyle.anchorBtns} href={elem.code} target='_blank' variant='contained' color='secondary' endIcon={<GitHub />}>code</Button>
                                 </Box>
+                                <Box component='div' className={useStyle.iconAnchors}>
+                                    <IconButton className={useStyle.anchorBtns}  color="primary"><PreviewIcon /></IconButton>
+                                    <IconButton className={useStyle.anchorBtns} color="secondary"><GitHub /></IconButton>
+                                </Box>
                             </Box>
                         )
                     })
@@ -501,6 +509,10 @@ const Projects = () => {
                                 <Box component='div' className={useStyle.anchors}>
                                     <Button className={useStyle.anchorBtns} variant='contained' color='primary' endIcon={<PreviewIcon />}>Preview</Button>
                                     <Button className={useStyle.anchorBtns} href={elem.code} target='_blank' variant='contained' color='secondary' endIcon={<GitHub />}>code</Button>
+                                </Box>
+                                <Box component='div' className={useStyle.iconAnchors}>
+                                    <IconButton className={useStyle.anchorBtns} color='primary'><PreviewIcon /></IconButton>
+                                    <IconButton className={useStyle.anchorBtns} color='secondary'><GitHub /></IconButton>
                                 </Box>
                             </Box>
                         )
