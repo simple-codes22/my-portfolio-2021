@@ -13,6 +13,9 @@ const footerStyle = makeStyles(theme => ({
         justifyContent:"center  !important",
         alignItems: 'center !important',
         position: 'relative !important',
+        [theme.breakpoints.down(400)]: {
+            flexDirection: 'column !important',
+        }
     },
     socialIcons: {
         position:'absolute !important',
@@ -23,7 +26,10 @@ const footerStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('smart')]: {
             right: '40px !important',
-        } // Do here
+        }, // Do here
+        [theme.breakpoints.down(400)]: {
+            position: 'static !important',
+        }
     },
     tradeMark: {
         fontSize: '13px !important',
@@ -41,7 +47,12 @@ const footerStyle = makeStyles(theme => ({
         } // Do here
         ,[theme.breakpoints.down('smart')]: {
             
-        } // Do here
+        }, // Do here
+        [theme.breakpoints.down(400)]: {
+            // position: 'absolute !important',
+            // left: ' !important',
+            // bottom: '5px !important',
+        }
     },
     iconLinks: {
         textDecoration: 'none !important',
@@ -88,11 +99,16 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('mini')]: {
             fontSize: '.85rem !important'
         }, // Do here
-        [theme.breakpoints.down('smart')]: {} // Do here
+        [theme.breakpoints.down(400)]: {
+            textAlign: 'center',
+        } // Do here
     },
     extras: {
         display: 'flex !important',
         flexDirection: 'row !important',
+        [theme.breakpoints.down(400)]: {
+            flexDirection: 'column !important',
+        }
     },
     nav: {
         display: 'flex !important',
@@ -101,6 +117,9 @@ const footerStyle = makeStyles(theme => ({
         flexDirection: 'column !important',
         marginLeft: '450px !important',
         marginBottom: '10px !important',
+        [theme.breakpoints.down(400)]: {
+            display: 'none !important',
+        }
     },
     navCover: {
         margin: '10px !important',
@@ -134,7 +153,10 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('mini')]: {
             left: '70px !important',
         }, // Do here
-        [theme.breakpoints.down('smart')]: {} // Do here
+        [theme.breakpoints.down('smart')]: {},
+        [theme.breakpoints.down(400)]: {
+            position: 'static !important',
+        }
     },
     desc: {
         marginTop: '30px !important',
@@ -149,7 +171,10 @@ const footerStyle = makeStyles(theme => ({
         [theme.breakpoints.down('smart')]: {
             fontSize: '8px !important',
             width: '340px !important',
-        } // Do here
+        },
+        [theme.breakpoints.down(400)]: {
+            textalign: 'justify !important',
+        }
     },
     resBtn: {
         height: '32px !important',
@@ -206,13 +231,13 @@ const Footer = () => {
                     </Box>
                 </Box>
             <Box component='div' className={useStyle.credits}>
-                <Box component='div' className={useStyle.tradeMark}>&copy; 2022 Simeon Akanbi. All rights reserved.</Box>
                 <Box component='div' className={useStyle.socialIcons}>
                     <a className={useStyle.iconLinks} href='https://www.github.com/simple-codes22'><GitHub /></a>
                     <a className={useStyle.iconLinks} href='https://www.github.com/simple-codes22'><LinkedIn /></a>
                     <a className={useStyle.iconLinks} href='https://www.twitter.com/simple-codes'><Twitter /></a>
                     <a className={useStyle.iconLinks} href='https://www.facebook.com/'><Facebook /></a>
                 </Box>
+                <Box component='div' className={useStyle.tradeMark}>&copy; 2022 Simeon Akanbi. All rights reserved.</Box>
             </Box>
         </Box>
     )
