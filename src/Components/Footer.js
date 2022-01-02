@@ -15,6 +15,9 @@ const footerStyle = makeStyles(theme => ({
         position: 'relative !important',
         [theme.breakpoints.down(400)]: {
             flexDirection: 'column !important',
+            height: '30vh !important',
+            justifyContent: 'flex-end !important',
+            alignItems: 'center !important',
         }
     },
     socialIcons: {
@@ -29,6 +32,14 @@ const footerStyle = makeStyles(theme => ({
         }, // Do here
         [theme.breakpoints.down(400)]: {
             position: 'static !important',
+        }
+    },
+    credits: {
+        [theme.breakpoints.down(400)]: {
+            display: 'flex !important',
+            justifyContent: 'flex-end !important',
+            alignItems: 'center !important',
+            flexDirection: 'column !important',
         }
     },
     tradeMark: {
@@ -49,9 +60,9 @@ const footerStyle = makeStyles(theme => ({
             
         }, // Do here
         [theme.breakpoints.down(400)]: {
-            // position: 'absolute !important',
-            // left: ' !important',
-            // bottom: '5px !important',
+            position: 'static !important',
+            margin: '20px !important',
+            color: '#ffffff8f'
         }
     },
     iconLinks: {
@@ -101,6 +112,7 @@ const footerStyle = makeStyles(theme => ({
         }, // Do here
         [theme.breakpoints.down(400)]: {
             textAlign: 'center',
+            margin: '10px !important',
         } // Do here
     },
     extras: {
@@ -173,7 +185,7 @@ const footerStyle = makeStyles(theme => ({
             width: '340px !important',
         },
         [theme.breakpoints.down(400)]: {
-            textalign: 'justify !important',
+            display: 'none',
         }
     },
     resBtn: {
