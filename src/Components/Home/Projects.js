@@ -290,7 +290,7 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down(400)]: {
             width: '84px !important',
             height: '100px !important',
-            margin: '3.3px !important',
+            margin: '3px !important',
         }
     },
     startupTitle: {
