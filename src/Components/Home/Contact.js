@@ -74,7 +74,7 @@ const contactStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             margin: '2px !important',
-        }
+        },
     },
     textField: {
         borderRadius: '0 !important',
@@ -98,6 +98,16 @@ const contactStyle = makeStyles(theme => ({
         [theme.breakpoints.down('smart')]: {
             width: '220px !important',
             margin: '7px !important',
+            '& label': {
+                fontSize: '15px !important',
+            }
+        }, 
+        [theme.breakpoints.down(400)]: {
+            width: '320px !important',
+            // height: ''
+            '& label': {
+                fontSize: '12px !important',
+            }
         }
     },
     mainText: {
@@ -119,6 +129,15 @@ const contactStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down('smart')]: {
             width: '480px !important',
+            '& label': {
+                fontSize: '15px !important',
+            }
+        },
+        [theme.breakpoints.down(400)]: {
+            width: '320px !important',
+            '& label': {
+                fontSize: '12px !important',
+            }
         }
     },
     alertStyle: {
@@ -138,12 +157,20 @@ const contactStyle = makeStyles(theme => ({
             width: '350px !important',
             height: '20px !important',
             fontSize: '9px !important',
+        }, [theme.breakpoints.down(400)]: {
+            width: '300px !important',
+            height: '35px !important',
+            fontSize: '11px !important',
+            textAlign: 'center !important',
         }
     },
     submitButton: {
         [theme.breakpoints.down('laptop')]: {
             margin: '5px',
             // width
+        }, [theme.breakpoints.down(400)]: {
+            margin: '10px !important',
+            letterSpacing: '.27px',
         }
     }
 }))
@@ -165,8 +192,22 @@ const Contact = () => {
     const [alert, setAlert] = useState({severity: '', on: false, message: ''})
     
     const AlertSection = () => {
-        
         if (alert.on) {
+            if (alert.severity === 'error') {
+                return(
+                    <Alert 
+                        className={useStyle.alertStyle} 
+                        style={{
+                                height: '35px !important',
+                                fontSize: '11px !important',
+                                textAlign: 'center !important',
+                            }}
+                        severity={alert.severity}
+                    >
+                        {alert.message}
+                    </Alert>
+                )
+            }
             return (
                 <Alert className={useStyle.alertStyle} severity={alert.severity}>{alert.message}</Alert>
             )
