@@ -248,8 +248,11 @@ const projectStyle = makeStyles(theme => ({
             [theme.breakpoints.down(650)]: {
                 width: '130px !important',
                 height: '80px !important',
+            },
+            [theme.breakpoints.down(400)]: {
+                width: '100% !important',
+                height: '55px !important',
             }
-            // border: '1px solid white',
         },
         '&:hover': {
             background: '#1c03639d !important',
@@ -283,6 +286,11 @@ const projectStyle = makeStyles(theme => ({
         [theme.breakpoints.down(650)]: {
             width: '130px !important',
             height: '140px !important',
+        }, 
+        [theme.breakpoints.down(400)]: {
+            width: '84px !important',
+            height: '100px !important',
+            margin: '3.3px !important',
         }
     },
     startupTitle: {
@@ -306,6 +314,8 @@ const projectStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             fontSize: '8px !important',
+        },[theme.breakpoints.down(400)]: {
+            margin: '4px !important',
         }
     },
     devStatement: {
@@ -326,6 +336,12 @@ const projectStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             fontSize: '4.5px !important',
+        },
+        [theme.breakpoints.down(400)]: {
+            '& svg': {
+                height: '15px !important',
+                width: '15px !important',
+            }
         }
     }
 }))
@@ -575,7 +591,7 @@ const Projects = () => {
                         {startups.bottomSection.map(elem => {
                             if (elem.state === 'development') {
                                 return (
-                                    <Box component='div' className={useStyle.Card}>
+                                    <Box component='div' key={elem.title_} className={useStyle.Card}>
                                         <Box component='div' className={`${useStyle.image} ${useStyle.Development}`}>
                                             <img src={elem.imageSrc} alt={elem.title_} />
                                         </Box>
