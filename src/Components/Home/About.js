@@ -11,7 +11,7 @@ const aboutStyle = makeStyles(theme => ({
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
-        flex: '1',
+        // flex: '1',
     },
     aboutImage: {
         width:'700px !important',
@@ -33,6 +33,9 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down(650)]: {
             width: '450px !important',
             height: '550px !important',
+        },
+        [theme.breakpoints.down(400)]: {
+            display: 'none !important',
         }
     },
     aboutSection: {
@@ -42,7 +45,9 @@ const aboutStyle = makeStyles(theme => ({
             width: '640px !important',
         },
         [theme.breakpoints.down('tablet')]: {
-            width: '600px !important',
+            width: '800px !important',
+        },[theme.breakpoints.down(400)]: {
+            width: '100vh !important',
         }
     },
     Title: {
@@ -56,7 +61,11 @@ const aboutStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             fontSize: '2rem !important',
-        }
+        },
+        [theme.breakpoints.down(400)]: {
+            fontSize: '2rem !important',
+            textAlign: 'center !important',
+        },
     },
     inBold: {
         fontSize: '23px !important',
@@ -75,6 +84,10 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down(650)]: {
             fontSize: '9px !important',
             letterSpacing: '.25px !important',
+        },[theme.breakpoints.down(400)]: {
+            textAlign: 'center !important',
+            fontSize: '15px !important',
+            letterSpacing: '.3px !important',
         }
     },
     normal: {
@@ -88,6 +101,9 @@ const aboutStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             fontSize: '.48rem !important',
+        },[theme.breakpoints.down(400)]: {
+            textAlign: 'center !important',
+            fontSize:'.6rem !important',
         }
     },
     mainImage: {
@@ -113,6 +129,8 @@ const aboutStyle = makeStyles(theme => ({
         [theme.breakpoints.down('smart')]: {
             width: '170px !important',
             height: '220px !important',
+        },[theme.breakpoints.down(400)]: {
+            display: 'none',
         }
     }
 }))
