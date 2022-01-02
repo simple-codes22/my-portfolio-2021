@@ -354,7 +354,7 @@ const Projects = () => {
                     desc_: 'A generic blogging app capable of basic CRUD operations.',
                     frontend: 'ReactJS',
                     backend: 'Supabase',
-                    code: 'https://www.github.com/',
+                    code: 'https://github.com/simple-codes22/Integrated-blogging-app',
                 },
                 {
                     title_: 'Netflix Clone',
