@@ -46,6 +46,12 @@ const cardStyle = makeStyles(theme => ({
             width: '110px !important',
             height: '140px !important',
             margin: '9px !important',
+        }, [theme.breakpoints.down(400)]: {
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '77px !important',
+            height: '96px !important',
+            margin: '7px !important',
         }
     },
     image: {
@@ -66,6 +72,11 @@ const cardStyle = makeStyles(theme => ({
             width: '55px !important',
             height: '55px !important',
             margin: '15px !important',
+        },
+        [theme.breakpoints.down(400)]: {
+            width: '80% !important',
+            margin: '0 !important',
+            height: '80% !important',
         }
     },
     langName: {
@@ -80,6 +91,8 @@ const cardStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(650)]: {
             fontSize: '.86rem !important',
+        }, [theme.breakpoints.down(400)]: {
+            display: 'none !important',
         }
     },
     division: {
