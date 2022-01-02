@@ -13,15 +13,22 @@ const introStyle = makeStyles(theme => ({
         flexDirection: 'column !important',
         // position: 'relative',
         background: '#22242b !important',
+        [theme.breakpoints.down(400)]: {
+            height: '80vh'
+        }
     },
     main: {
         left: '30px !important',
         flexDirection: 'column !important',
-        height: '300px !important',
+        height: '100vh !important',
         display: 'flex !important',
         justifyContent: 'center !important',
         alignItems: 'center !important',
         background: '#22242b !important',
+        [theme.breakpoints.down(400)]: {
+            justifyContent: 'flex-start !important',
+            height: '80vh',
+        }
     },
     Title: {
         fontSize: '47px !important',
@@ -49,7 +56,8 @@ const introStyle = makeStyles(theme => ({
         },
         [theme.breakpoints.down(425)]: {
             width: '340px !important',
-            fontSize: '12px !important',
+            fontSize: '33px !important',
+            marginTop: '15vh',
         },
         [theme.breakpoints.down(380)]: {
             width: '280px !important',
@@ -82,8 +90,9 @@ const introStyle = makeStyles(theme => ({
             fontSize: '6.4px !important'
         },
         [theme.breakpoints.down(425)]: {
-            width: '200px !important',
-            fontSize: '5.9px !important',
+            width: '230px !important',
+            fontSize: '12px !important',
+            color: '#ffffffb5'
         }
     },
     projectBtn: {
@@ -111,6 +120,11 @@ const introStyle = makeStyles(theme => ({
             width: '80px !important',
             height: '25px !important',
             fontSize: '5px !important',
+        },
+        [theme.breakpoints.down(400)]: {
+            width: '100px !important',
+            height: '45px !important',
+            fontSize: '10px !important',
         }
     }
 }))

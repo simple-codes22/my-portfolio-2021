@@ -52,7 +52,7 @@ const NavStyle = makeStyles(theme => ({
             width: '27px !important',
             height: '27px !important',
         },
-        [themebreakpoints.down(400)]: {
+        [theme.breakpoints.down(400)]: {
             width: '24px !important',
             height: '24px !important',
         }
