@@ -36,15 +36,6 @@ const projectStyle = makeStyles(theme => ({
         justifyContent: 'center !important',
         alignItems: 'center !important',
         flexDirection: 'column !important',
-        [theme.breakpoints.up('desktop')]: { // For the desktop
-
-        },
-        [theme.breakpoints.down('laptop')]: { // For the tablet
-
-        },
-        [theme.breakpoints.down('tablet')]: { // For the mobile phone
-
-        }
     },
     subtitle: {
         textAlign: 'center !important',

@@ -26,7 +26,7 @@ const introStyle = makeStyles(theme => ({
         alignItems: 'center !important',
         background: '#22242b !important',
         [theme.breakpoints.down(400)]: {
-            justifyContent: 'flex-start !important',
+            justifyContent: 'center !important',
             height: '80vh',
         }
     },
