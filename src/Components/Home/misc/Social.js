@@ -45,9 +45,9 @@ const Social = () => {
     const useStyle = socialStyle();
     return (
         <Box component='div' className={useStyle.root}>
-                <a href='https://www.github.com/' target='_blank' rel="noreferrer" className={`${useStyle.iconSpace} ${useStyle.GitHubIcon}`}><GitHub /></a>
-                <a href='https://www.linkedin.com/' target='_blank' rel="noreferrer" className={`${useStyle.iconSpace}  ${useStyle.LinkedInIcon}`}><LinkedIn /></a>
-                <a href='https://www.twitter.com/' target='_blank' rel="noreferrer" className={`${useStyle.iconSpace}  ${useStyle.TwitterIcon}`}><Twitter /></a>
+                <a href='https://www.github.com/simple-codes22' target='_blank' rel="noreferrer" className={`${useStyle.iconSpace} ${useStyle.GitHubIcon}`}><GitHub /></a>
+                <a href='https://www.linkedin.com/simple-codes22' target='_blank' rel="noreferrer" className={`${useStyle.iconSpace}  ${useStyle.LinkedInIcon}`}><LinkedIn /></a>
+                <a href='https://www.twitter.com/simple-codes' target='_blank' rel="noreferrer" className={`${useStyle.iconSpace}  ${useStyle.TwitterIcon}`}><Twitter /></a>
                 <a href='https://www.facebook.com/' target='_blank' rel="noreferrer" className={`${useStyle.iconSpace}  ${useStyle.FacebookIcon}`}><Facebook /></a>
         </Box>
     )
