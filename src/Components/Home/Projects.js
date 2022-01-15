@@ -528,7 +528,7 @@ const Projects = () => {
                                 </Box>
                                 <Box component='div' className={useStyle.iconAnchors}>
                                     <IconButton className={useStyle.anchorBtns} color='primary'><PreviewIcon /></IconButton>
-                                    <IconButton className={useStyle.anchorBtns} color='secondary'><GitHub /></IconButton>
+                                    <IconButton href={elem.code} className={useStyle.anchorBtns} color='secondary'><GitHub /></IconButton>
                                 </Box>
                             </Box>
                         )
